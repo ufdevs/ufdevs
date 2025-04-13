@@ -66,7 +66,7 @@ export default function PortfolioPage() {
             <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold text-center mb-4">Our Portfolio</h1>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-12">
-                    Explore our past projects and see how we've helped businesses transform their digital presence
+                    Explore our past projects and see how we&apos;ve helped businesses transform their digital presence
                     and achieve their goals through innovative solutions.
                 </p>
 

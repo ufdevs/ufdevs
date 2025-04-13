@@ -86,7 +86,7 @@ const ContactForm = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold mb-4 text-white">Get In Touch</h2>
                     <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                        Have a project in mind? Contact us today for a free consultation and let's discuss how we can help your business grow.
+                        Have a project in mind? Contact us today for a free consultation and let&apos;s discuss how we can help your business grow.
                     </p>
                 </div>
 
@@ -171,7 +171,7 @@ const ContactForm = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-2 text-white">Thank You!</h3>
                                 <p className="text-gray-300 mb-6">
-                                    Your message has been sent successfully. We'll get back to you shortly.
+                                    Your message has been sent successfully. We&apos;ll get back to you shortly.
                                 </p>
                                 <button
                                     onClick={() => setIsSubmitted(false)}
@@ -249,7 +249,7 @@ const ContactForm = () => {
                                     </div>
 
                                     <div className="mb-6">
-                                        <label className="block text-white font-medium mb-2">Services You're Interested In</label>
+                                        <label className="block text-white font-medium mb-2">Services You&apos;re Interested In</label>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
                                             {serviceOptions.map((service, index) => (
                                                 <div key={index} className="flex items-center">

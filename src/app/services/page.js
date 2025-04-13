@@ -120,7 +120,7 @@ export default function ServicesPage() {
             <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold text-center mb-4 text-white">Our Services</h1>
                 <p className="text-lg text-gray-300 max-w-3xl mx-auto text-center mb-12">
-                    We provide comprehensive digital solutions to help businesses transform, innovate, and grow in today's competitive marketplace.
+                    We provide comprehensive digital solutions to help businesses transform, innovate, and grow in today&apos;s competitive marketplace.
                     Explore our services below to find the right match for your needs.
                 </p>
 
@@ -168,7 +168,7 @@ export default function ServicesPage() {
                                 <h2 className="text-3xl font-bold mb-4 text-white">Ready to Transform Your Digital Presence?</h2>
                                 <p className="text-gray-300 mb-6">
                                     Whatever your digital needs may be, our team of experts is ready to help you bring your vision to life.
-                                    Let's discuss how we can help your business grow with our tailored solutions.
+                                    Let&apos;s discuss how we can help your business grow with our tailored solutions.
                                 </p>
                                 <Link
                                     href="/contact"

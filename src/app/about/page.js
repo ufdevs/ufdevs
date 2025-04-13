@@ -21,7 +21,7 @@ export default function AboutPage() {
 
                     <p className="text-lg mb-6">
                         Our team of passionate developers, designers, and strategists work together to deliver
-                        exceptional results that exceed our clients' expectations.
+                        exceptional results that exceed our clients&apos; expectations.
                     </p>
 
                     {/* More content can be added here */}

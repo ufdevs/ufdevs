@@ -87,7 +87,7 @@ const About = () => {
                             Founded by IIT Patna alumni, Unfiltered 😏 Developers (UFDev.LLC) brings cutting-edge digital solutions to your doorstep. I am Ramesh Vishwakarma, a passionate full-stack app developer, and we are here to help transform your offline business into an online powerhouse.
                         </p>
                         <p className="text-gray-300 mb-6 text-base">
-                            Our focus is on providing scalable, affordable, and efficient services that cater to your unique needs. From custom apps to backend management, we're committed to providing the best digital experiences.
+                            Our focus is on providing scalable, affordable, and efficient services that cater to your unique needs. From custom apps to backend management, we&apos;re committed to providing the best digital experiences.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
