@@ -45,9 +45,11 @@ Ensure your project has the correct configuration files:
    - **Development Command**: `npm run dev`
 
 5. Environment Variables (add these if needed):
-   - `MONGODB_URI` - Your MongoDB connection string
+   - `MONGODB_URI` - Your MongoDB connection string **(REQUIRED)**
    - `NODE_ENV` - Set to `production`
    - Any other environment variables your app needs
+
+   > **IMPORTANT**: The MONGODB_URI is required for the application to function properly. Without it, the build will fail with an error message. This connection string should point to your MongoDB database.
 
 6. Click "Deploy"
 

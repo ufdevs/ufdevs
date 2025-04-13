@@ -42,10 +42,12 @@ A modern, responsive website for UFDev Agency showcasing our services, portfolio
 
 3. Create a `.env.local` file with the following variables:
    ```
-   MONGODB_URI=your_mongodb_connection_string
+   MONGODB_URI=your_mongodb_connection_string  # REQUIRED
    EMAIL_USER=your_email_for_contact_form
    EMAIL_PASS=your_email_password
    ```
+
+   > **IMPORTANT**: The MONGODB_URI is required for the application to function. You can get a free MongoDB Atlas database at [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas).
 
 4. Run the development server
    ```bash

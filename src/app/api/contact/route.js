@@ -16,26 +16,50 @@ export async function POST(request) {
             );
         }
 
-        // Connect to database
-        await connectToDatabase();
+        try {
+            // Connect to database
+            await connectToDatabase();
 
-        // Create new contact submission
-        const newContact = await Contact.create({
-            name,
-            email,
-            phone: phone || '',
-            subject,
-            message,
-            services: services || [],
-        });
+            // Create new contact submission
+            const newContact = await Contact.create({
+                name,
+                email,
+                phone: phone || '',
+                subject,
+                message,
+                services: services || [],
+            });
 
-        // Send email notification (in a production environment, you would use a real email service)
-        await sendEmailNotification(newContact);
+            // Send email notification (in a production environment, you would use a real email service)
+            await sendEmailNotification(newContact);
 
-        return NextResponse.json(
-            { message: 'Contact form submitted successfully', data: newContact },
-            { status: 201 }
-        );
+            return NextResponse.json(
+                { message: 'Contact form submitted successfully', data: newContact },
+                { status: 201 }
+            );
+        } catch (dbError) {
+            console.error('Database error:', dbError);
+
+            // Store contact data in a fallback way (you could log to file, send to another service, etc.)
+            const contactData = {
+                name, email, phone, subject, message, services: services || [],
+                timestamp: new Date().toISOString(),
+            };
+
+            console.log('Contact submission received but not saved to database:', contactData);
+
+            // Still try to send the email notification even if DB fails
+            await sendEmailNotification(contactData);
+
+            // Return success to client, even though DB storage failed
+            return NextResponse.json(
+                {
+                    message: 'Contact form submitted successfully, but there was an issue with storage. Our team has been notified.',
+                    fallback: true
+                },
+                { status: 202 }
+            );
+        }
     } catch (error) {
         console.error('Error submitting contact form:', error);
         return NextResponse.json(
@@ -76,9 +100,10 @@ async function sendEmailNotification(contact) {
         <p><strong>Email:</strong> ${contact.email}</p>
         <p><strong>Phone:</strong> ${contact.phone || 'N/A'}</p>
         <p><strong>Subject:</strong> ${contact.subject}</p>
-        <p><strong>Services:</strong> ${contact.services.join(', ') || 'None specified'}</p>
+        <p><strong>Services:</strong> ${Array.isArray(contact.services) ? contact.services.join(', ') : 'None specified'}</p>
         <p><strong>Message:</strong></p>
         <p>${contact.message}</p>
+        <p><strong>Timestamp:</strong> ${contact.timestamp || new Date().toISOString()}</p>
       `,
         };
 
