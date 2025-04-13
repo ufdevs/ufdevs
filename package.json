@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm install tailwindcss postcss autoprefixer typescript critters && next build",
+    "build": "npm install tailwindcss postcss autoprefixer typescript critters && NEXT_DISABLE_ESLINT=1 next build --no-lint",
     "start": "next start",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build",

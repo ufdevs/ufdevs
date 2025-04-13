@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
     reactStrictMode: true,
     poweredByHeader: false,
@@ -32,8 +34,9 @@ const nextConfig = {
         ];
     },
     // Explicitly configure webpack
-    webpack: (config) => {
+    webpack: (config, { isServer }) => {
         // Ensure tailwindcss is available
+        config.resolve.alias['@'] = path.join(__dirname, 'src');
         return config;
     },
 };
