@@ -1,0 +1,35 @@
+{
+    "name": "UFDev Agency",
+    "short_name": "UFDev",
+    "description": "Your trusted partner for web and mobile app development",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0C1222",
+    "theme_color": "#10B981",
+    "icons": [
+        {
+            "src": "/ufdev-favicon.svg",
+            "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/apple-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon",
+            "purpose": "any"
+        }
+    ]
+}
