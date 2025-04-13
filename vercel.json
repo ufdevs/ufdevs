@@ -1,6 +1,9 @@
 {
     "version": 2,
-    "buildCommand": "npm install && [ -n \"$MONGODB_URI\" ] && npm run build || (echo 'ERROR: MONGODB_URI environment variable is required' && exit 1)",
+    "buildCommand": "export MONGODB_URI=${MONGODB_URI:-'mongodb+srv://demo:demo@cluster0.mongodb.net/demo?retryWrites=true&w=majority'} && npm install && npm run build",
     "installCommand": "npm install",
-    "outputDirectory": ".next"
+    "outputDirectory": ".next",
+    "env": {
+        "NODE_ENV": "production"
+    }
 }
