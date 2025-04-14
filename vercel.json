@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "buildCommand": "export MONGODB_URI=${MONGODB_URI:-'mongodb+srv://demo:demo@cluster0.mongodb.net/demo?retryWrites=true&w=majority'} && npm install && npm run build || (echo '⚠️ Build failed with errors - check logs' && false)",
+    "buildCommand": "npm run build",
     "installCommand": "npm install",
     "outputDirectory": ".next",
     "env": {
