@@ -1,14 +1,49 @@
-# UFDev Agency - Tech Services by IIT Patna Alumnus Ramesh Vishwakarma
+# UFDevs - Robots.txt
+# Website: https://ufdevs.com
+
 User-agent: *
 Allow: /
 
-# Important service pages - highest crawl priority
+# High priority pages for web development and app development services
 Allow: /services/web-development
 Allow: /services/mobile-apps
-Allow: /services/backend
+Allow: /services/ott-development
+Allow: /blog/web-app-development-guide
+Allow: /blog/how-much-does-app-development-cost
+Allow: /blog/web-development-technologies-comparison
 Allow: /about/ramesh-vishwakarma-iit-patna
 Allow: /portfolio/imaxx-tv-ott
-Allow: /blog/ramesh-vishwakarma-iit-patna-journey-to-tech-success
 
-# Sitemap location
-Sitemap: https://serv.ufdevs.me/sitemap.xml 
+# Don't index admin areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Don't index search results
+Disallow: /*?q=*
+Disallow: /*?s=*
+Disallow: /*?search=*
+
+# Sitemaps
+Sitemap: https://ufdevs.com/sitemap.xml
+
+# Crawl-delay for specific bots
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 2
+
+# Allow images to be indexed
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Social media verification files
+Allow: /pinterest-*.html$
+Allow: /google*.html$
+Allow: /yandex_*.html$
+Allow: /BingSiteAuth.xml$ 

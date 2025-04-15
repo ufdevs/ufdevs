@@ -192,19 +192,24 @@ const Navbar = () => {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="md:hidden overflow-hidden bg-dark-800 border-t border-gray-700 mt-2"
+                            className="md:hidden fixed inset-x-0 top-[72px] overflow-hidden bg-dark-900/95 backdrop-blur-sm border-t border-gray-700"
                         >
-                            <div className="px-4 py-3 space-y-2">
+                            <div className="px-6 py-6 space-y-4 max-h-[calc(100vh-72px)] overflow-y-auto">
                                 {navLinks.map((link, index) => (
-                                    <div key={index}>
+                                    <div key={index} className="border-b border-gray-700/30 pb-3">
                                         {link.dropdown ? (
                                             <div>
                                                 <button
                                                     onClick={toggleServices}
-                                                    className="flex items-center justify-between w-full py-2 text-white hover:text-emerald-400"
+                                                    className="flex items-center justify-between w-full py-2 text-white hover:text-emerald-400 font-medium"
                                                 >
-                                                    <span className={`${pathname === link.path ? 'text-emerald-400' : ''}`}>{link.name}</span>
-                                                    <FiChevronDown className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                                                    <span className={`text-lg ${pathname === link.path ? 'text-emerald-400' : ''}`}>{link.name}</span>
+                                                    <motion.div
+                                                        animate={{ rotate: servicesOpen ? 180 : 0 }}
+                                                        transition={{ duration: 0.2 }}
+                                                    >
+                                                        <FiChevronDown className="text-emerald-400 h-5 w-5" />
+                                                    </motion.div>
                                                 </button>
 
                                                 <AnimatePresence>
@@ -214,13 +219,13 @@ const Navbar = () => {
                                                             animate={{ opacity: 1, height: 'auto' }}
                                                             exit={{ opacity: 0, height: 0 }}
                                                             transition={{ duration: 0.2 }}
-                                                            className="pl-4 space-y-1 overflow-hidden"
+                                                            className="pl-4 space-y-3 mt-2 overflow-hidden"
                                                         >
                                                             {link.subItems.map((subItem, subIndex) => (
                                                                 <Link
                                                                     key={subIndex}
                                                                     href={subItem.path}
-                                                                    className={`block py-2 text-sm text-gray-300 hover:text-emerald-400 ${pathname === subItem.path ? 'text-emerald-400' : ''
+                                                                    className={`block py-2 text-gray-300 hover:text-emerald-400 transition-colors ${pathname === subItem.path ? 'text-emerald-400 font-medium' : ''
                                                                         }`}
                                                                     onClick={closeMenu}
                                                                 >
@@ -236,7 +241,7 @@ const Navbar = () => {
                                                 <a
                                                     href={link.path}
                                                     onClick={(e) => scrollToSection(e, link.sectionId)}
-                                                    className={`block py-2 text-white hover:text-emerald-400 ${pathname === link.path ? 'text-emerald-400' : ''
+                                                    className={`block py-2 text-lg text-white hover:text-emerald-400 font-medium ${pathname === link.path ? 'text-emerald-400' : ''
                                                         }`}
                                                 >
                                                     {link.name}
@@ -244,7 +249,7 @@ const Navbar = () => {
                                             ) : (
                                                 <Link
                                                     href={link.path}
-                                                    className={`block py-2 text-white hover:text-emerald-400 ${pathname === link.path ? 'text-emerald-400' : ''
+                                                    className={`block py-2 text-lg text-white hover:text-emerald-400 font-medium ${pathname === link.path ? 'text-emerald-400' : ''
                                                         }`}
                                                     onClick={closeMenu}
                                                 >
@@ -254,6 +259,17 @@ const Navbar = () => {
                                         )}
                                     </div>
                                 ))}
+
+                                {/* Mobile Contact Button */}
+                                <div className="pt-2">
+                                    <Link
+                                        href="/contact"
+                                        className="block w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-md text-center transition-colors"
+                                        onClick={closeMenu}
+                                    >
+                                        Get in Touch
+                                    </Link>
+                                </div>
                             </div>
                         </motion.div>
                     )}

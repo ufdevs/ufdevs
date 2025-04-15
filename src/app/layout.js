@@ -6,22 +6,22 @@ import generateJsonLd from './jsonld';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'UFDev Agency | Web & Mobile App Development by Ramesh Vishwakarma',
-  description: 'Premium web and mobile app development agency founded by IIT Patna alumnus Ramesh Vishwakarma. Experts in OTT platforms, e-commerce solutions, and custom software development.',
-  keywords: 'web development, app development, UI/UX design, digital services, software development, Mumbai, Ramesh Vishwakarma, iMaxx TV, OTT platform, streaming service, AVOD, SVOD, TVOD, IIT Patna, IITP, OTT development, React developer, Node.js, Firebase, AWS, Flutter, mobile app developer, full stack developer, website development, mobile app banane wale, website banane wala, website developer in Mumbai, app developer in Maharashtra, OTT platform kaise banaye, streaming app developer, IIT Patna graduate, IITPian, रमेश विश्वकर्मा, वेबसाइट डेवलपर, ऐप डेवलपर, आईआईटी पटना, ओटीटी प्लेटफॉर्म, स्ट्रीमिंग सेवा, वेब डेवलपमेंट, मोबाइल ऐप, Mumbai tech startup, best app developer India, affordable website development, streaming platforms India',
+  title: 'Best Web & App Development Services | UFDev by IIT Patna Alumni',
+  description: 'Professional Web Development, Mobile App & OTT Platform Development Services by IIT Patna graduate Ramesh Vishwakarma. Affordable website design, React JS, Flutter app development in Mumbai.',
+  keywords: 'web development, mobile app development, app developer, website development, web designer, React developer, website designer, Node.js development, Flutter app development, Android app development, iOS app development, website development company, affordable web development, best app developers, ecommerce website development, web application development, MERN stack, responsive website design, frontend development, backend development, full stack developer, progressive web app, web development services, app development services, UI/UX design, SEO optimization, website redesign, custom web development, website builder, web development cost, website design services, OTT platform development, React Native developer, website development near me, app developers India, app development cost, website maintenance, website hosting, web API development, WordPress developer, shopify developer, wix developer, web development agency, mobile app agency',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://serv.ufdevs.me',
-    site_name: 'UFDev Agency',
-    title: 'UFDev Agency | Web & Mobile Development by IIT Patna alumnus',
-    description: 'Founded by Ramesh Vishwakarma (IIT Patna), UFDev specializes in OTT platforms like iMaxx TV, e-commerce solutions, and custom app development.',
+    url: 'https://ufdevs.com',
+    site_name: 'UFDev Web & App Development',
+    title: 'Top Web & Mobile App Development Services | UFDev',
+    description: 'Professional Web, Mobile App & OTT Development by IIT Patna graduate. Specializing in React, Node.js, Flutter. Best prices in Mumbai & India.',
     images: [
       {
         url: '/ufdev.llc.png',
         width: 800,
         height: 600,
-        alt: 'UFDev Agency',
+        alt: 'UFDev Web & App Development Services by IIT Graduate',
       },
     ],
   },
@@ -38,16 +38,26 @@ export const metadata = {
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
+      'max-video-preview': -1,
     },
   },
   alternates: {
-    canonical: 'https://serv.ufdevs.me',
+    canonical: 'https://ufdevs.com',
+    languages: {
+      'en-US': 'https://ufdevs.com',
+      'hi-IN': 'https://ufdevs.com/about/ramesh-vishwakarma-iit-patna/hinglish',
+    },
+  },
+  verification: {
+    google: 'googleverification',
+    yandex: 'yandexverification',
   },
   authors: [
     { name: 'Ramesh Vishwakarma', url: 'https://linkedin.com/in/ramesh-vishwakarma-iitp' },
   ],
-  creator: 'Ramesh Vishwakarma',
+  creator: 'Ramesh Vishwakarma - IIT Patna Alumnus',
   publisher: 'UFDev LLC',
+  category: 'Web Development, App Development, OTT Platform Development',
   icons: {
     icon: [
       {
