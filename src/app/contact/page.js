@@ -44,7 +44,7 @@ export default function ContactPage() {
                                     <FiMapPin className="text-blue-600 mt-1 mr-4 text-xl" />
                                     <div>
                                         <h3 className="font-medium">Address</h3>
-                                        <p className="text-gray-600">IIT Patna, Bihar, India</p>
+                                        <p className="text-gray-600">Vasai West, Mumbai, Maharashtra - 402108</p>
                                     </div>
                                 </div>
                             </div>

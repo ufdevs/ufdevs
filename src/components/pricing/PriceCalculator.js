@@ -25,7 +25,7 @@ const PriceCalculator = () => {
             id: 'idea',
             title: 'Idea Validation',
             description: 'Market research, competitor analysis, and feasibility study',
-            basePrice: 20000,
+            basePrice: 3000,
             baseDays: 5,
             icon: <FiCheckCircle className="text-2xl mb-2" />
         },
@@ -33,7 +33,7 @@ const PriceCalculator = () => {
             id: 'design',
             title: 'UI/UX Design',
             description: 'Wireframes, prototypes, and user experience design',
-            basePrice: 35000,
+            basePrice: 5000,
             baseDays: 7,
             icon: <FiMonitor className="text-2xl mb-2" />
         },
@@ -41,23 +41,23 @@ const PriceCalculator = () => {
             id: 'development',
             title: 'Development',
             description: 'Frontend and backend development, API integration',
-            basePrice: 80000,
-            baseDays: 18,
+            basePrice: 25000,
+            baseDays: 25,
             icon: <FiCode className="text-2xl mb-2" />
         },
         {
             id: 'deployment',
             title: 'Deployment',
             description: 'Testing, QA, and production deployment',
-            basePrice: 25000,
-            baseDays: 5,
+            basePrice: 10000,
+            baseDays: 20,
             icon: <FiServer className="text-2xl mb-2" />
         },
         {
             id: 'growth',
             title: 'Growth Strategy',
             description: 'SEO, analytics setup, and performance optimization',
-            basePrice: 30000,
+            basePrice: 10000,
             baseDays: 8,
             icon: <FiSettings className="text-2xl mb-2" />
         }
@@ -65,31 +65,40 @@ const PriceCalculator = () => {
 
     // Platform options
     const platformOptions = [
-        { id: 'web', label: 'Web App', icon: <FiMonitor className="text-lg mr-2" />, multiplier: 1 },
+        { id: 'web', label: 'Web App', icon: <FiMonitor className="text-lg mr-2" />, multiplier: 1.1 },
         { id: 'android', label: 'Android App', icon: <FiSmartphone className="text-lg mr-2" />, multiplier: 1.2 },
-        { id: 'ios', label: 'iOS App', icon: <FiSmartphone className="text-lg mr-2" />, multiplier: 1.25 },
-        { id: 'all', label: 'All Platforms', icon: <FiCheckCircle className="text-lg mr-2" />, multiplier: 2.2 }
+        { id: 'ios', label: 'iOS App', icon: <FiSmartphone className="text-lg mr-2" />, multiplier: 1.4 },
+        { id: 'tv', label: 'TV App', icon: <FiSmartphone className="text-lg mr-2" />, multiplier: 1.6 },
+        { id: 'all', label: 'All Platforms', icon: <FiCheckCircle className="text-lg mr-2" />, multiplier: 1.7 }
     ];
 
     // Frontend framework options
     const frontendOptions = [
-        { id: 'react', label: 'React', icon: <FiZap className="text-lg mr-2" />, multiplier: 1 },
-        { id: 'vue', label: 'Vue.js', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.05 },
-        { id: 'angular', label: 'Angular', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.1 }
+        { id: 'wordpress', label: 'Wordpress', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.15 },
+        { id: 'html', label: 'HTML/CSS/JS', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.1 },
+        { id: 'react', label: 'React', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.2 },
+        // { id: 'vue', label: 'Vue.js', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.2 },
+        { id: 'angular', label: 'Angular', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.3 },
+        { id: 'nextjs', label: 'Next.js', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.5 },
+        { id: 'flutter', label: 'Flutter', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.6 },
+        { id: 'reactnative', label: 'React Native', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.7 }
     ];
 
     // Backend options
     const backendOptions = [
+        { id: 'none', label: 'None', icon: <FiZap className="text-lg mr-2" />, multiplier: 1 },
+        { id: 'firebase', label: 'Firebase', icon: <FiServer className="text-lg mr-2" />, multiplier: 1 },
+        { id: 'php', label: 'PHP', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.5 },
         { id: 'node', label: 'Node.js', icon: <FiServer className="text-lg mr-2" />, multiplier: 1 },
-        { id: 'django', label: 'Django', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.1 },
-        { id: 'both', label: 'Node.js + Django', icon: <FiCheckCircle className="text-lg mr-2" />, multiplier: 1.8 }
+        { id: 'django', label: 'Django', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.2 },
+        { id: 'both', label: 'Node.js + Django', icon: <FiCheckCircle className="text-lg mr-2" />, multiplier: 2 }
     ];
 
     // Complexity multipliers
     const complexityMultipliers = {
-        simple: 0.8,
-        medium: 1,
-        complex: 1.5
+        simple: 0.5,
+        medium: 0.9,
+        complex: 1.1
     };
 
     // Timeframe multipliers
@@ -100,18 +109,18 @@ const PriceCalculator = () => {
 
     // Budget options
     const budgetOptions = [
-        { id: 'lowBudget', label: 'Budget-friendly', icon: <FiDollarSign className="text-lg mr-2" />, multiplier: 0.85 },
-        { id: 'standardBudget', label: 'Standard', icon: <FiDollarSign className="text-lg mr-2" />, multiplier: 1 },
-        { id: 'highBudget', label: 'Premium', icon: <FiAward className="text-lg mr-2" />, multiplier: 1.2 }
+        { id: 'lowBudget', label: 'Budget-friendly', icon: <FiDollarSign className="text-lg mr-2" />, multiplier: 0.7 },
+        { id: 'standardBudget', label: 'Standard', icon: <FiDollarSign className="text-lg mr-2" />, multiplier: 1.1 },
+        { id: 'highBudget', label: 'Premium', icon: <FiAward className="text-lg mr-2" />, multiplier: 1.8 }
     ];
 
     // Add industry options
     const industryOptions = [
-        { id: 'ecommerce', label: 'E-commerce', icon: <FiShoppingBag className="text-lg mr-2" />, multiplier: 1.1 },
-        { id: 'healthcare', label: 'Healthcare', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.2 },
-        { id: 'finance', label: 'Finance', icon: <FiDollarSign className="text-lg mr-2" />, multiplier: 1.25 },
+        { id: 'ecommerce', label: 'E-commerce', icon: <FiShoppingBag className="text-lg mr-2" />, multiplier: 1.3 },
+        { id: 'healthcare', label: 'Healthcare', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.4 },
+        { id: 'finance', label: 'Finance', icon: <FiDollarSign className="text-lg mr-2" />, multiplier: 1.5 },
         { id: 'education', label: 'Education', icon: <FiUsers className="text-lg mr-2" />, multiplier: 1.05 },
-        { id: 'technology', label: 'Technology', icon: <FiCode className="text-lg mr-2" />, multiplier: 1 },
+        { id: 'technology', label: 'Technology', icon: <FiCode className="text-lg mr-2" />, multiplier: 1.1 },
         { id: 'media', label: 'Media & Entertainment', icon: <FiMonitor className="text-lg mr-2" />, multiplier: 1.15 }
     ];
 
@@ -252,6 +261,63 @@ const PriceCalculator = () => {
             currency: 'INR',
             maximumFractionDigits: 0
         }).format(price);
+    };
+
+    // Generate WhatsApp message with all selected options
+    const generateWhatsAppMessage = () => {
+        // Get names of needed stages
+        const neededStageNames = neededStages.map(id =>
+            pricingOptions.find(opt => opt.id === id)?.title || ''
+        ).filter(name => name).join(", ");
+
+        // Get names of completed stages
+        const completedStageNames = completedStages.map(id =>
+            pricingOptions.find(opt => opt.id === id)?.title || ''
+        ).filter(name => name).join(", ");
+
+        // Get platform names
+        const platformNames = platforms.map(id =>
+            platformOptions.find(opt => opt.id === id)?.label || ''
+        ).filter(name => name).join(", ");
+
+        // Get backend name
+        const backendName = backendOptions.find(opt => opt.id === backend)?.label || '';
+
+        // Get frontend framework name
+        const frontendName = frontendOptions.find(opt => opt.id === frontendFramework)?.label || '';
+
+        // Get industry name
+        const industryName = industryOptions.find(opt => opt.id === industry)?.label || '';
+
+        // Get budget name
+        const budgetName = budgetOptions.find(opt => opt.id === budget)?.label || '';
+
+        // Create message
+        const message = `
+Hello! I'm interested in discussing my project with the following specifications:
+
+*Price Estimate*: ${formatPrice(totalPrice)}
+*Time Estimate*: ${totalDays} days (${timeframe === 'expedited' ? 'Expedited' : 'Standard'})
+
+*Needed Services*: ${neededStageNames || 'None'}
+*Completed Services*: ${completedStageNames || 'None'}
+*Platforms*: ${platformNames}
+*Frontend Framework*: ${frontendName}
+*Backend Technology*: ${backendName}
+*Industry*: ${industryName}
+*Complexity*: ${complexity.charAt(0).toUpperCase() + complexity.slice(1)}
+*Budget Range*: ${budgetName}
+
+I would like to negotiate and discuss this project further. Thank you!`;
+
+        return encodeURIComponent(message);
+    };
+
+    // Handle negotiate button click
+    const handleNegotiate = () => {
+        const message = generateWhatsAppMessage();
+        const phoneNumber = "+917510060787"; // Replace with your actual WhatsApp number
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     };
 
     return (
@@ -501,11 +567,12 @@ const PriceCalculator = () => {
                                 animate={true}
                                 icon={<FiArrowRight />}
                                 className="w-full lg:w-auto"
+                                onClick={handleNegotiate}
                             >
-                                Get Detailed Quote
+                                Negotiate Now
                             </Button>
                             <p className="text-xs text-gray-400 mt-1">
-                                Final price may vary based on specific requirements.
+                                Opens WhatsApp to discuss your requirements.
                             </p>
                         </div>
                     </div>

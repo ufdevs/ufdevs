@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata = {
   title: 'UFDev Agency',
   description: 'Your trusted partner for web and mobile app development',
-  keywords: 'web development, app development, UI/UX design, digital services, software development, IIT Patna, Ramesh Vishwakarma',
+  keywords: 'web development, app development, UI/UX design, digital services, software development, Mumbai, Ramesh Vishwakarma',
   icons: {
     icon: [
       {

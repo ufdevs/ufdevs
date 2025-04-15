@@ -8,6 +8,14 @@ import SectionReveal from '../common/SectionReveal';
 const Projects = () => {
     const projects = [
         {
+            title: "iMaxx TV OTT Platform",
+            description: "Next-generation Global OTT platform with AVOD, SVOD & TVOD models for content creators and audiences.",
+            image: "/imaxxtv.png",
+            tags: ["React", "Node.js", "Firebase", "AWS"],
+            demoLink: "https://www.imaxxtvdigital.com/",
+            repoLink: "#"
+        },
+        {
             title: "E-Commerce Platform",
             description: "A fully responsive e-commerce website with product catalog, cart functionality, and secure payment processing.",
             image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -17,20 +25,20 @@ const Projects = () => {
         },
         {
             title: "Food Delivery App",
-            description: "Cross-platform mobile application for food ordering and delivery with real-time order tracking.",
+            description: "Cross-platform mobile application for food ordering and delivery with real-time order tracking. Android , iOS and Web",
             image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1022&q=80",
-            tags: ["React Native", "Firebase", "Google Maps API"],
+            tags: ["Flutter", "Firebase", "Google Maps API"],
             demoLink: "#",
             repoLink: "#"
         },
-        {
-            title: "Healthcare Management System",
-            description: "Comprehensive platform for healthcare providers to manage patient records, appointments, and billing.",
-            image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-            tags: ["Angular", "Express.js", "PostgreSQL", "AWS"],
-            demoLink: "#",
-            repoLink: "#"
-        }
+        // {
+        //     title: "Healthcare Management System",
+        //     description: "Comprehensive platform for healthcare providers to manage patient records, appointments, and billing.",
+        //     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        //     tags: ["Angular", "Express.js", "PostgreSQL", "AWS"],
+        //     demoLink: "#",
+        //     repoLink: "#"
+        // }
     ];
 
     return (

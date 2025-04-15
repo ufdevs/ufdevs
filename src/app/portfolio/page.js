@@ -12,6 +12,14 @@ export default function PortfolioPage() {
 
     const projects = [
         {
+            title: 'iMaxx TV OTT Platform',
+            category: 'Web & Mobile App Development',
+            description: 'A next-generation Global OTT platform with AVOD, SVOD & TVOD models. Built for content creators and audiences with seamless streaming across all devices. Features include user profiles, parental controls, and offline viewing.',
+            technologies: ['React', 'Node.js', 'Firebase', 'AWS', 'Payment Gateway Integration'],
+            image: '/imaxxtv.png',
+            link: 'https://www.imaxxtvdigital.com/'
+        },
+        {
             title: 'E-Commerce Platform',
             category: 'Web Development',
             description: 'A full-featured e-commerce solution with payment integration, inventory management, and an intuitive admin panel.',

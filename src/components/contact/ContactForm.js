@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiSend, FiPhone, FiMail, FiMapPin, FiCheckCircle } from 'react-icons/fi';
+import { FiSend, FiPhone, FiMail, FiMapPin, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import axios from 'axios';
 
 const ContactForm = () => {
@@ -48,36 +49,49 @@ const ContactForm = () => {
         setFormData({ ...formData, services });
     };
 
-    const handleSubmit = async (e) => {
+    // Generate WhatsApp message with contact details
+    const handleWhatsAppContact = (e) => {
         e.preventDefault();
-        setIsSubmitting(true);
-        setError('');
 
-        try {
-            // Send data to our API route
-            const response = await axios.post('/api/contact', formData);
-
-            if (response.status === 201) {
-                setIsSubmitted(true);
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    subject: '',
-                    message: '',
-                    services: []
-                });
-            }
-        } catch (err) {
-            console.error('Error submitting form:', err);
-
-            const errorMessage = err.response?.data?.error ||
-                'There was an error submitting your message. Please try again.';
-
-            setError(errorMessage);
-        } finally {
-            setIsSubmitting(false);
+        // Validate required fields
+        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            setError('Please fill in all required fields before sending message.');
+            return;
         }
+
+        setError('');
+        setIsSubmitting(true);
+
+        // Create a formatted message with form data
+        const message = `
+Hello! I'm interested in discussing a project with UFDevs.
+
+*Name*: ${formData.name}
+*Email*: ${formData.email}
+*Phone*: ${formData.phone}
+*Subject*: ${formData.subject}
+*Services Interested*: ${formData.services.join(', ')}
+*Message*: ${formData.message}
+
+I look forward to hearing from you!`;
+
+        // Open WhatsApp with the message
+        const phoneNumber = "+917510060787";
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+
+        // Reset form after opening WhatsApp
+        setTimeout(() => {
+            setIsSubmitted(true);
+            setIsSubmitting(false);
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: '',
+                services: []
+            });
+        }, 500);
     };
 
     return (
@@ -103,8 +117,8 @@ const ContactForm = () => {
                                 <FiPhone className="text-xl mr-4 mt-1" />
                                 <div>
                                     <h4 className="font-medium mb-1">Call Us</h4>
-                                    <a href="tel:+1234567890" className="text-emerald-100 hover:text-white transition">
-                                        +1 (234) 567-890
+                                    <a href="tel:+917510060787" className="text-emerald-100 hover:text-white transition">
+                                        +91 751 006 0787
                                     </a>
                                 </div>
                             </div>
@@ -124,7 +138,7 @@ const ContactForm = () => {
                                 <div>
                                     <h4 className="font-medium mb-1">Visit Us</h4>
                                     <address className="text-emerald-100 not-italic">
-                                        IIT Patna, Bihar, India
+                                        Vasai West, Mumbai, Maharashtra - 402108
                                     </address>
                                 </div>
                             </div>
@@ -188,7 +202,7 @@ const ContactForm = () => {
                                     </div>
                                 )}
 
-                                <form onSubmit={handleSubmit}>
+                                <form onSubmit={handleWhatsAppContact}>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                         <div>
                                             <label htmlFor="name" className="block text-white font-medium mb-2">Your Name</label>
@@ -285,8 +299,7 @@ const ContactForm = () => {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className={`w-full bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center transition-colors ${isSubmitting ? 'bg-emerald-800 cursor-not-allowed' : 'hover:bg-emerald-700'
-                                            }`}
+                                        className="w-full bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-center transition-colors hover:bg-emerald-700"
                                     >
                                         {isSubmitting ? (
                                             <>
@@ -298,7 +311,7 @@ const ContactForm = () => {
                                             </>
                                         ) : (
                                             <>
-                                                Send Message <FiSend className="ml-2" />
+                                                <FaWhatsapp className="mr-2 text-lg" /> Contact on WhatsApp
                                             </>
                                         )}
                                     </button>

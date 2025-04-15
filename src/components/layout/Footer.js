@@ -56,8 +56,8 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-start">
                                 <FiPhone className="text-emerald-400 mt-1 mr-3" />
-                                <a href="tel:+1234567890" className="text-gray-300 hover:text-emerald-400">
-                                    +1 (234) 567-890
+                                <a href="tel:+917510060787" className="text-gray-300 hover:text-emerald-400">
+                                    +91 7510060787
                                 </a>
                             </div>
                             <div className="flex items-start">
@@ -69,7 +69,7 @@ const Footer = () => {
                             <div className="flex items-start">
                                 <FiMapPin className="text-emerald-400 mt-1 mr-3" />
                                 <span className="text-gray-300">
-                                    IIT Patna, Bihar, India
+                                    Vasai West, Mumbai, Maharashtra - 402108
                                 </span>
                             </div>
                         </div>
