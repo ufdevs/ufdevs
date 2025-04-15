@@ -5,9 +5,48 @@ import PageTransitionProvider from '../components/common/PageTransitionProvider'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'UFDev Agency',
-  description: 'Your trusted partner for web and mobile app development',
-  keywords: 'web development, app development, UI/UX design, digital services, software development, Mumbai, Ramesh Vishwakarma',
+  title: 'UFDev Agency | Web & Mobile App Development by Ramesh Vishwakarma',
+  description: 'Premium web and mobile app development agency founded by IIT Patna alumnus Ramesh Vishwakarma. Experts in OTT platforms, e-commerce solutions, and custom software development.',
+  keywords: 'web development, app development, UI/UX design, digital services, software development, Mumbai, Ramesh Vishwakarma, iMaxx TV, OTT platform, streaming service, AVOD, SVOD, TVOD, IIT Patna, IITP, OTT development, React developer, Node.js, Firebase, AWS, Flutter, mobile app developer, full stack developer',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://serv.ufdevs.me',
+    site_name: 'UFDev Agency',
+    title: 'UFDev Agency | Web & Mobile Development by IIT Patna alumnus',
+    description: 'Founded by Ramesh Vishwakarma (IIT Patna), UFDev specializes in OTT platforms like iMaxx TV, e-commerce solutions, and custom app development.',
+    images: [
+      {
+        url: '/ufdev.llc.png',
+        width: 800,
+        height: 600,
+        alt: 'UFDev Agency',
+      },
+    ],
+  },
+  twitter: {
+    cardType: 'summary_large_image',
+    handle: '@ufdev',
+    site: '@ufdev',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://serv.ufdevs.me',
+  },
+  authors: [
+    { name: 'Ramesh Vishwakarma', url: 'https://linkedin.com/in/ramesh-vishwakarma-iitp' },
+  ],
+  creator: 'Ramesh Vishwakarma',
+  publisher: 'UFDev LLC',
   icons: {
     icon: [
       {
@@ -53,6 +92,47 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#10B981" />
+
+        {/* Schema.org JSON-LD for better SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "UFDev Agency",
+              "url": "https://serv.ufdevs.me",
+              "logo": "https://serv.ufdevs.me/ufdev.llc.png",
+              "foundingDate": "2023",
+              "founders": [
+                {
+                  "@type": "Person",
+                  "name": "Ramesh Vishwakarma",
+                  "alumniOf": "Indian Institute of Technology Patna",
+                  "jobTitle": "Founder & Full Stack Developer"
+                }
+              ],
+              "description": "Premium web and mobile app development agency founded by IIT Patna alumnus Ramesh Vishwakarma.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Vasai West",
+                "addressLocality": "Mumbai",
+                "addressRegion": "Maharashtra",
+                "postalCode": "402108",
+                "addressCountry": "IN"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+917510060787",
+                "contactType": "customer service"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/ufdev",
+                "https://github.com/ufdevs"
+              ]
+            })
+          }}
+        />
       </head>
       <body className="antialiased">
         <PageTransitionProvider>
