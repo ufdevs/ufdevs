@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata = {
   title: 'UFDev Agency | Web & Mobile App Development by Ramesh Vishwakarma',
   description: 'Premium web and mobile app development agency founded by IIT Patna alumnus Ramesh Vishwakarma. Experts in OTT platforms, e-commerce solutions, and custom software development.',
-  keywords: 'web development, app development, UI/UX design, digital services, software development, Mumbai, Ramesh Vishwakarma, iMaxx TV, OTT platform, streaming service, AVOD, SVOD, TVOD, IIT Patna, IITP, OTT development, React developer, Node.js, Firebase, AWS, Flutter, mobile app developer, full stack developer',
+  keywords: 'web development, app development, UI/UX design, digital services, software development, Mumbai, Ramesh Vishwakarma, iMaxx TV, OTT platform, streaming service, AVOD, SVOD, TVOD, IIT Patna, IITP, OTT development, React developer, Node.js, Firebase, AWS, Flutter, mobile app developer, full stack developer, website development, mobile app banane wale, website banane wala, website developer in Mumbai, app developer in Maharashtra, OTT platform kaise banaye, streaming app developer, IIT Patna graduate, IITPian, रमेश विश्वकर्मा, वेबसाइट डेवलपर, ऐप डेवलपर, आईआईटी पटना, ओटीटी प्लेटफॉर्म, स्ट्रीमिंग सेवा, वेब डेवलपमेंट, मोबाइल ऐप, Mumbai tech startup, best app developer India, affordable website development, streaming platforms India',
   openGraph: {
     type: 'website',
     locale: 'en_US',

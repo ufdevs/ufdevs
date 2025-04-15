@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 export const metadata = {
     title: 'iMaxx TV OTT Platform | UFDev Agency by Ramesh Vishwakarma IIT Patna',
     description: 'Case study of iMaxx TV, a next-generation OTT platform with AVOD, SVOD & TVOD models developed by Ramesh Vishwakarma from IIT Patna. Features user profiles, parental controls, and multi-device streaming.',
-    keywords: 'iMaxx TV, OTT platform, streaming service, AVOD, SVOD, TVOD, Ramesh Vishwakarma, IIT Patna, IITP, React, Node.js, Firebase, AWS, OTT development, video streaming platform, content monetization, UFDev, streaming app development',
+    keywords: 'iMaxx TV, OTT platform, streaming service, AVOD, SVOD, TVOD, Ramesh Vishwakarma, IIT Patna, IITP, React, Node.js, Firebase, AWS, OTT development, video streaming platform, content monetization, UFDev, streaming app development, best OTT platform India, streaming app kaise banaye, OTT platform developer India, iMaxx TV Digital Private Limited, रमेश विश्वकर्मा आईआईटी पटना, ओटीटी प्लेटफॉर्म डेवलपर, स्ट्रीमिंग ऐप, video streaming app, Netflix jaisa app, YouTube clone, streaming platform development cost, OTT platform price in India, movie streaming app, web series app, iMaxx TV alternatives, iMaxx TV features, iMaxx TV app download, iMaxx TV subscription, OTT platform for content creators, sell videos online, monetize video content, video streaming business, digital content platform',
     alternates: {
         canonical: 'https://serv.ufdevs.me/portfolio/imaxx-tv-ott',
     },
@@ -284,7 +284,83 @@ export default function ImaxxTvPage() {
                         Discuss Your Project
                     </Link>
                 </div>
+
+                {/* FAQ Section for SEO */}
+                <div className="mt-16">
+                    <h2 className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+                    <div className="space-y-6">
+                        {faqs.map((faq, index) => (
+                            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
+                                <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: faq.answer }}></div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Schema.org FAQ markup for SEO */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": faqs.map(faq => ({
+                                "@type": "Question",
+                                "name": faq.question,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": faq.answer.replace(/<\/?[^>]+(>|$)/g, "") // Strip HTML tags
+                                }
+                            }))
+                        })
+                    }}
+                />
             </div>
         </main>
     );
-} 
+}
+
+// FAQ data for SEO targeting common queries in English and Hinglish
+const faqs = [
+    {
+        question: "What is iMaxx TV OTT platform?",
+        answer: "iMaxx TV is a next-generation OTT (Over-The-Top) platform that enables content creators, filmmakers, and artists to showcase and monetize their work. It was developed by Ramesh Vishwakarma, an IIT Patna alumnus and founder of UFDev Agency. The platform supports multiple monetization models including AVOD (advertising), SVOD (subscription), and TVOD (pay-per-view)."
+    },
+    {
+        question: "Who developed the iMaxx TV platform?",
+        answer: "The iMaxx TV platform was developed by <strong>Ramesh Vishwakarma</strong>, an alumnus of IIT Patna and founder of UFDev Agency. As the lead developer, Ramesh architected the entire platform from concept to deployment, implementing advanced features like multi-device streaming, user profiles, and a sophisticated recommendation engine."
+    },
+    {
+        question: "How much does it cost to develop an OTT platform like iMaxx TV?",
+        answer: "The cost of developing an OTT platform like iMaxx TV typically ranges from ₹15-50 lakhs, depending on the features, scale, and complexity required. Factors affecting the cost include the number of platforms supported (web, iOS, Android, smart TVs), customization level, content delivery requirements, and monetization models. At UFDev Agency, we offer tailored solutions that balance quality and cost-effectiveness. Contact us for a personalized quote."
+    },
+    {
+        question: "OTT platform kaise banaye? (How to build an OTT platform?)",
+        answer: "OTT platform banane ke liye aapko technical expertise ki zaroorat hoti hai. Main steps include: 1) Content strategy planning, 2) Technology stack selection (like React, Node.js, and AWS), 3) UI/UX design, 4) Development of front-end and back-end systems, 5) Content management system creation, 6) Payment gateway integration, 7) Deployment and testing. UFDev Agency provides end-to-end development services for OTT platforms with expertise from IIT Patna alumnus Ramesh Vishwakarma."
+    },
+    {
+        question: "What technologies were used to build iMaxx TV?",
+        answer: "iMaxx TV was built using a modern technology stack including: <ul><li>Frontend: React.js with Redux</li><li>Backend: Node.js with Express</li><li>Database: MongoDB for content and Firebase for user data</li><li>Cloud Infrastructure: AWS S3, CloudFront, and MediaConvert</li><li>Video Streaming: HLS (HTTP Live Streaming) with adaptive bitrate</li><li>Authentication: Firebase Auth</li><li>Payment Processing: Custom implementation with multiple gateways</li></ul>"
+    },
+    {
+        question: "Can I hire Ramesh Vishwakarma from IIT Patna for my project?",
+        answer: "Yes, Ramesh Vishwakarma (IIT Patna alumnus) is available for select development projects through UFDev Agency. With expertise in OTT platforms, e-commerce solutions, and custom software development, Ramesh and his team provide end-to-end development services. To discuss your project requirements, simply <a href='/contact' class='text-blue-600 hover:underline'>contact us</a> through our website."
+    },
+    {
+        question: "What features does the iMaxx TV platform offer?",
+        answer: "iMaxx TV offers a comprehensive set of features including: <ul><li>Multi-device streaming across web, mobile, and smart TVs</li><li>Personalized user profiles and content recommendations</li><li>Parental controls and content filtering</li><li>Offline viewing capabilities</li><li>Multiple monetization models (AVOD, SVOD, TVOD)</li><li>Content analytics for creators</li><li>Adaptive bitrate streaming for optimal viewing</li><li>Content protection and DRM</li><li>Payment processing and subscription management</li></ul>"
+    },
+    {
+        question: "Netflix jaisa app kitne mein banega? (How much would it cost to build an app like Netflix?)",
+        answer: "Netflix jaisa app banane ka cost features aur scale par depend karta hai. Basic OTT platform ₹15-30 lakhs mein ban sakta hai, lekin advanced features aur scale ke saath cost ₹40-80 lakhs tak ja sakta hai. Netflix ke complete ecosystem (including AI recommendations, global CDN, etc.) ke liye ₹1 crore se zyada lag sakta hai. UFDev Agency mein, hum aapke budget ke anusaar custom solutions provide karte hain. Humse contact karein personalized quote ke liye."
+    },
+    {
+        question: "How long does it take to develop an OTT platform?",
+        answer: "The development timeline for an OTT platform typically ranges from 4-8 months, depending on the complexity and feature set. A basic platform with essential features can be developed in 3-4 months, while a more comprehensive solution with advanced features might take 6-8 months. The development process includes planning, design, development, testing, and deployment phases."
+    },
+    {
+        question: "रमेश विश्वकर्मा IIT पटना से कौन हैं? (Who is Ramesh Vishwakarma from IIT Patna?)",
+        answer: "रमेश विश्वकर्मा IIT पटना के पूर्व छात्र हैं और UFDev Agency के संस्थापक हैं। वे एक अनुभवी फुल-स्टैक डेवलपर हैं जिन्होंने iMaxx TV जैसे OTT प्लेटफॉर्म और कई अन्य डिजिटल प्रोडक्ट्स का निर्माण किया है। उनके पास वेब और मोबाइल ऐप डेवलपमेंट में 5+ वर्षों का अनुभव है, और वे React, Node.js, Firebase, AWS जैसी तकनीकों में विशेषज्ञ हैं। वे अपनी टीम के साथ मुंबई से काम करते हैं और अफोर्डेबल दरों पर हाई-क्वालिटी सॉफ्टवेयर सॉल्यूशंस प्रदान करते हैं।"
+    }
+]; 
