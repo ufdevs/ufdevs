@@ -1,11 +1,14 @@
-# Allow all crawlers
+# UFDev Agency - Tech Services by IIT Patna Alumnus Ramesh Vishwakarma
 User-agent: *
 Allow: /
 
-# Prioritize key pages
+# Important service pages - highest crawl priority
+Allow: /services/web-development
+Allow: /services/mobile-apps
+Allow: /services/backend
 Allow: /about/ramesh-vishwakarma-iit-patna
-Allow: /blog/ramesh-vishwakarma-iit-patna-journey-to-tech-success
 Allow: /portfolio/imaxx-tv-ott
+Allow: /blog/ramesh-vishwakarma-iit-patna-journey-to-tech-success
 
 # Sitemap location
 Sitemap: https://serv.ufdevs.me/sitemap.xml 

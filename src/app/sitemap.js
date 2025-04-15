@@ -2,45 +2,40 @@ export default function sitemap() {
     const baseUrl = 'https://serv.ufdevs.me';
     const currentDate = new Date().toISOString();
 
-    // Main pages
+    // Main pages with improved priorities
     const routes = [
-        '',
-        '/about',
-        '/about/ramesh-vishwakarma-iit-patna',
-        '/services',
-        '/services/web-development',
-        '/services/mobile-apps',
-        '/services/ui-ux-design',
-        '/services/backend',
-        '/services/cloud',
-        '/services/devops',
-        '/portfolio',
-        '/portfolio/imaxx-tv-ott', // Dedicated iMaxx TV page
-        '/pricing',
-        '/contact',
-        '/blog'
-    ].map((route) => ({
+        // Core pages with highest priorities
+        { route: '', priority: 1.0, changeFrequency: 'weekly' },
+        { route: '/about', priority: 0.9, changeFrequency: 'weekly' },
+        { route: '/services', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/portfolio', priority: 0.9, changeFrequency: 'weekly' },
+        { route: '/pricing', priority: 0.9, changeFrequency: 'weekly' },
+        { route: '/contact', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/blog', priority: 0.85, changeFrequency: 'weekly' },
+
+        // Profile page with very high priority - this is your key differentiator
+        { route: '/about/ramesh-vishwakarma-iit-patna', priority: 0.98, changeFrequency: 'daily' },
+
+        // Service pages with detailed priorities
+        { route: '/services/web-development', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/services/mobile-apps', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/services/ui-ux-design', priority: 0.90, changeFrequency: 'weekly' },
+        { route: '/services/backend', priority: 0.92, changeFrequency: 'weekly' },
+        { route: '/services/cloud', priority: 0.88, changeFrequency: 'weekly' },
+        { route: '/services/devops', priority: 0.88, changeFrequency: 'weekly' },
+
+        // Featured project page
+        { route: '/portfolio/imaxx-tv-ott', priority: 0.93, changeFrequency: 'monthly' },
+
+        // Blog post page
+        { route: '/blog/ramesh-vishwakarma-iit-patna-journey-to-tech-success', priority: 0.92, changeFrequency: 'weekly' },
+    ];
+
+    // Map routes to the format expected by Next.js
+    return routes.map(({ route, priority, changeFrequency }) => ({
         url: `${baseUrl}${route}`,
         lastModified: currentDate,
-        changeFrequency: route === '/about/ramesh-vishwakarma-iit-patna' ? 'daily' : 'weekly',
-        priority: route === '' ? 1.0 : route === '/about/ramesh-vishwakarma-iit-patna' ? 0.95 : route === '/portfolio/imaxx-tv-ott' ? 0.9 : 0.8,
+        changeFrequency,
+        priority,
     }));
-
-    return [
-        ...routes,
-        // Additional project pages
-        {
-            url: `${baseUrl}/portfolio/imaxx-tv-ott`,
-            lastModified: currentDate,
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        // Explicitly list the Ramesh profile page with highest priority
-        {
-            url: `${baseUrl}/about/ramesh-vishwakarma-iit-patna`,
-            lastModified: currentDate,
-            changeFrequency: 'daily',
-            priority: 0.95,
-        },
-    ];
 } 

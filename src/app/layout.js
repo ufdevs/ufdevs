@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import PageTransitionProvider from '../components/common/PageTransitionProvider';
+import generateJsonLd from './jsonld';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -82,6 +83,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // Generate the rich JSON-LD data
+  const jsonLd = generateJsonLd();
+
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
@@ -93,44 +97,11 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#10B981" />
 
-        {/* Schema.org JSON-LD for better SEO */}
+        {/* Enhanced Schema.org JSON-LD for better SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "UFDev Agency",
-              "url": "https://serv.ufdevs.me",
-              "logo": "https://serv.ufdevs.me/ufdev.llc.png",
-              "foundingDate": "2023",
-              "founders": [
-                {
-                  "@type": "Person",
-                  "name": "Ramesh Vishwakarma",
-                  "alumniOf": "Indian Institute of Technology Patna",
-                  "jobTitle": "Founder & Full Stack Developer"
-                }
-              ],
-              "description": "Premium web and mobile app development agency founded by IIT Patna alumnus Ramesh Vishwakarma.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Vasai West",
-                "addressLocality": "Mumbai",
-                "addressRegion": "Maharashtra",
-                "postalCode": "402108",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+917510060787",
-                "contactType": "customer service"
-              },
-              "sameAs": [
-                "https://linkedin.com/company/ufdev",
-                "https://github.com/ufdevs"
-              ]
-            })
+            __html: JSON.stringify(jsonLd)
           }}
         />
       </head>
