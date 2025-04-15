@@ -167,7 +167,97 @@ const Navbar = () => {
                             </div>
                         ))}
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={toggleMenu}
+                            className="text-white p-2 focus:outline-none"
+                            aria-label={isOpen ? "Close menu" : "Open menu"}
+                        >
+                            {isOpen ? (
+                                <FiX className="h-6 w-6 text-emerald-400" />
+                            ) : (
+                                <FiMenu className="h-6 w-6" />
+                            )}
+                        </button>
+                    </div>
                 </div>
+
+                {/* Mobile Menu */}
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="md:hidden overflow-hidden bg-dark-800 border-t border-gray-700 mt-2"
+                        >
+                            <div className="px-4 py-3 space-y-2">
+                                {navLinks.map((link, index) => (
+                                    <div key={index}>
+                                        {link.dropdown ? (
+                                            <div>
+                                                <button
+                                                    onClick={toggleServices}
+                                                    className="flex items-center justify-between w-full py-2 text-white hover:text-emerald-400"
+                                                >
+                                                    <span className={`${pathname === link.path ? 'text-emerald-400' : ''}`}>{link.name}</span>
+                                                    <FiChevronDown className={`transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
+                                                </button>
+
+                                                <AnimatePresence>
+                                                    {servicesOpen && (
+                                                        <motion.div
+                                                            initial={{ opacity: 0, height: 0 }}
+                                                            animate={{ opacity: 1, height: 'auto' }}
+                                                            exit={{ opacity: 0, height: 0 }}
+                                                            transition={{ duration: 0.2 }}
+                                                            className="pl-4 space-y-1 overflow-hidden"
+                                                        >
+                                                            {link.subItems.map((subItem, subIndex) => (
+                                                                <Link
+                                                                    key={subIndex}
+                                                                    href={subItem.path}
+                                                                    className={`block py-2 text-sm text-gray-300 hover:text-emerald-400 ${pathname === subItem.path ? 'text-emerald-400' : ''
+                                                                        }`}
+                                                                    onClick={closeMenu}
+                                                                >
+                                                                    {subItem.name}
+                                                                </Link>
+                                                            ))}
+                                                        </motion.div>
+                                                    )}
+                                                </AnimatePresence>
+                                            </div>
+                                        ) : (
+                                            link.sectionId ? (
+                                                <a
+                                                    href={link.path}
+                                                    onClick={(e) => scrollToSection(e, link.sectionId)}
+                                                    className={`block py-2 text-white hover:text-emerald-400 ${pathname === link.path ? 'text-emerald-400' : ''
+                                                        }`}
+                                                >
+                                                    {link.name}
+                                                </a>
+                                            ) : (
+                                                <Link
+                                                    href={link.path}
+                                                    className={`block py-2 text-white hover:text-emerald-400 ${pathname === link.path ? 'text-emerald-400' : ''
+                                                        }`}
+                                                    onClick={closeMenu}
+                                                >
+                                                    {link.name}
+                                                </Link>
+                                            )
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
     );

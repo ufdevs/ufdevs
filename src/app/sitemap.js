@@ -6,6 +6,7 @@ export default function sitemap() {
     const routes = [
         '',
         '/about',
+        '/about/ramesh-vishwakarma-iit-patna',
         '/services',
         '/services/web-development',
         '/services/mobile-apps',
@@ -21,8 +22,8 @@ export default function sitemap() {
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: currentDate,
-        changeFrequency: 'weekly',
-        priority: route === '' ? 1.0 : route === '/portfolio/imaxx-tv-ott' ? 0.9 : 0.8,
+        changeFrequency: route === '/about/ramesh-vishwakarma-iit-patna' ? 'daily' : 'weekly',
+        priority: route === '' ? 1.0 : route === '/about/ramesh-vishwakarma-iit-patna' ? 0.95 : route === '/portfolio/imaxx-tv-ott' ? 0.9 : 0.8,
     }));
 
     return [
@@ -33,6 +34,13 @@ export default function sitemap() {
             lastModified: currentDate,
             changeFrequency: 'monthly',
             priority: 0.9,
+        },
+        // Explicitly list the Ramesh profile page with highest priority
+        {
+            url: `${baseUrl}/about/ramesh-vishwakarma-iit-patna`,
+            lastModified: currentDate,
+            changeFrequency: 'daily',
+            priority: 0.95,
         },
     ];
 } 

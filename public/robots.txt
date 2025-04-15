@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Prioritize key pages
+Allow: /about/ramesh-vishwakarma-iit-patna
+Allow: /blog/ramesh-vishwakarma-iit-patna-journey-to-tech-success
+Allow: /portfolio/imaxx-tv-ott
+
+# Sitemap location
+Sitemap: https://serv.ufdevs.me/sitemap.xml 
