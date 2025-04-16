@@ -1,13 +1,32 @@
 export const metadata = {
-    title: 'Complete Guide to Web & App Development in 2024 | UFDev',
-    description: 'Learn everything about web development, mobile app development, and how to choose the right technology stack for your project. Tips, best practices, and cost estimates by industry experts.',
-    keywords: 'web development guide, app development tutorial, website development steps, mobile app development process, React vs Angular, Flutter vs React Native, Node.js backend, full stack development, website development cost, app development price, React.js development, Next.js framework, MongoDB database, Firebase backend, REST API development, GraphQL vs REST, responsive web design, mobile app UI design, web development tools, app development technologies, frontend development, backend development, web app vs native app, hybrid app development, PWA development, web development company India, app developers Mumbai',
+    title: "Complete Web & App Development Guide 2024 | Process & Technologies | UFDev",
+    description: "Learn the complete process of web and app development from planning to deployment. Explore frontend, backend technologies, best practices, and industry trends.",
+    keywords: [
+        "web app development guide",
+        "web development process",
+        "app development steps",
+        "frontend development",
+        "backend technologies",
+        "mobile app development",
+        "web development frameworks",
+        "full-stack development",
+        "responsive web design",
+        "progressive web apps",
+        "software development lifecycle",
+        "agile development",
+        "development best practices",
+        "web technologies",
+        "app development technologies"
+    ],
     openGraph: {
-        title: 'Ultimate Web & App Development Guide (2024) | UFDev',
-        description: 'Complete guide to web and mobile app development with technology comparisons, development process, cost breakdown, and best practices for businesses and startups.',
-        type: 'article',
-        publishedTime: '2024-04-15T10:00:00Z',
-        authors: ['Ramesh Vishwakarma'],
-        tags: ['Web Development', 'App Development', 'React', 'Node.js', 'Flutter', 'Mobile Apps', 'Frontend', 'Backend'],
+        title: "Complete Web & App Development Guide 2024 | Process & Technologies",
+        description: "Comprehensive guide to web and app development processes, technologies, and best practices for building successful digital products",
+        url: "https://ufdevs.com/blog/web-app-development-guide",
+        type: "article",
+        publishedTime: "2024-04-15T10:00:00Z",
+        authors: ["Ramesh Vishwakarma"],
+        tags: ["Web Development", "App Development", "Development Process", "Frontend", "Backend", "Best Practices"]
     }
-}; 
+};
+
+export default metadata; 
