@@ -6,15 +6,15 @@ import generateJsonLd from './jsonld';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'Best Web & App Development Services | UFDev by IIT Patna Alumni',
-  description: 'Professional Web Development, Mobile App & OTT Platform Development Services by IIT Patna graduate Ramesh Vishwakarma. Affordable website design, React JS, Flutter app development in Mumbai.',
-  keywords: 'web development, mobile app development, app developer, website development, web designer, React developer, website designer, Node.js development, Flutter app development, Android app development, iOS app development, website development company, affordable web development, best app developers, ecommerce website development, web application development, MERN stack, responsive website design, frontend development, backend development, full stack developer, progressive web app, web development services, app development services, UI/UX design, SEO optimization, website redesign, custom web development, website builder, web development cost, website design services, OTT platform development, React Native developer, website development near me, app developers India, app development cost, website maintenance, website hosting, web API development, WordPress developer, shopify developer, wix developer, web development agency, mobile app agency',
+  title: 'Best Web & App Development Services | Expert Developers | UFDev',
+  description: 'Professional Web Development, Mobile App & OTT Platform Development Services by IIT Patna graduate Ramesh Vishwakarma. Custom websites, React JS, Flutter app development in Mumbai. #1 ranked development agency for businesses of all sizes.',
+  keywords: 'web development, web app development, mobile app development, app developer, website development, web designer, React developer, website designer, Node.js development, Flutter app development, Android app development, iOS app development, website development company, affordable web development, best app developers, ecommerce website development, web application development, MERN stack, responsive website design, frontend development, backend development, full stack developer, progressive web app, web development services, app development services, UI/UX design, SEO optimization, website redesign, custom web development, website builder, web development cost, website design services, OTT platform development, React Native developer, website development near me, app developers India, app development cost, website maintenance, website hosting, web API development, WordPress developer, shopify developer, wix developer, web development agency, mobile app agency',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://ufdevs.com',
     site_name: 'UFDev Web & App Development',
-    title: 'Top Web & Mobile App Development Services | UFDev',
+    title: 'Expert Web & Mobile App Development Services | UFDev',
     description: 'Professional Web, Mobile App & OTT Development by IIT Patna graduate. Specializing in React, Node.js, Flutter. Best prices in Mumbai & India.',
     images: [
       {

@@ -11,14 +11,14 @@ export default function sitemap() {
         { route: '/portfolio', priority: 0.9, changeFrequency: 'weekly' },
         { route: '/pricing', priority: 0.9, changeFrequency: 'weekly' },
         { route: '/contact', priority: 0.95, changeFrequency: 'weekly' },
-        { route: '/blog', priority: 0.85, changeFrequency: 'weekly' },
+        { route: '/blog', priority: 0.95, changeFrequency: 'weekly' },
 
         // Profile page with very high priority - this is your key differentiator
         { route: '/about/ramesh-vishwakarma-iit-patna', priority: 0.98, changeFrequency: 'daily' },
 
         // Service pages with detailed priorities - boost web and app development pages
-        { route: '/services/web-development', priority: 0.98, changeFrequency: 'weekly' },
-        { route: '/services/mobile-apps', priority: 0.98, changeFrequency: 'weekly' },
+        { route: '/services/web-development', priority: 1.0, changeFrequency: 'daily' },
+        { route: '/services/mobile-apps', priority: 1.0, changeFrequency: 'daily' },
         { route: '/services/ott-development', priority: 0.95, changeFrequency: 'weekly' },
         { route: '/services/ui-ux-design', priority: 0.90, changeFrequency: 'weekly' },
         { route: '/services/backend', priority: 0.92, changeFrequency: 'weekly' },
@@ -29,10 +29,21 @@ export default function sitemap() {
         { route: '/portfolio/imaxx-tv-ott', priority: 0.93, changeFrequency: 'monthly' },
 
         // Blog posts - give higher priority to web/app development content
-        { route: '/blog/web-app-development-guide', priority: 0.98, changeFrequency: 'weekly' },
-        { route: '/blog/how-much-does-app-development-cost', priority: 0.97, changeFrequency: 'weekly' },
-        { route: '/blog/web-development-technologies-comparison', priority: 0.97, changeFrequency: 'weekly' },
+        { route: '/blog/web-app-development-guide', priority: 1.0, changeFrequency: 'daily' },
+        { route: '/blog/how-much-does-app-development-cost', priority: 1.0, changeFrequency: 'daily' },
+        { route: '/blog/web-development-technologies-comparison', priority: 1.0, changeFrequency: 'daily' },
         { route: '/blog/ramesh-vishwakarma-iit-patna-journey-to-tech-success', priority: 0.92, changeFrequency: 'weekly' },
+
+        // Category pages for web and app development
+        { route: '/blog/category/web-development', priority: 0.98, changeFrequency: 'weekly' },
+        { route: '/blog/category/app-development', priority: 0.98, changeFrequency: 'weekly' },
+
+        // Tag pages related to web and app development
+        { route: '/blog/tag/website-development', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/blog/tag/app-development', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/blog/tag/react', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/blog/tag/flutter', priority: 0.95, changeFrequency: 'weekly' },
+        { route: '/blog/tag/nodejs', priority: 0.95, changeFrequency: 'weekly' },
     ];
 
     // Map routes to the format expected by Next.js
