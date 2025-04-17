@@ -1,29 +1,29 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import PageTransitionProvider from '../components/common/PageTransitionProvider';
-import generateJsonLd from './jsonld';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import Script from 'next/script';
+import { generateJsonLd } from './jsonld';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata = {
-  title: 'Best Web & App Development Services | Expert Developers | UFDev',
-  description: 'Professional Web Development, Mobile App & OTT Platform Development Services by IIT Patna graduate Ramesh Vishwakarma. Custom websites, React JS, Flutter app development in Mumbai. #1 ranked development agency for businesses of all sizes.',
-  keywords: 'web development, web app development, mobile app development, app developer, website development, web designer, React developer, website designer, Node.js development, Flutter app development, Android app development, iOS app development, website development company, affordable web development, best app developers, ecommerce website development, web application development, MERN stack, responsive website design, frontend development, backend development, full stack developer, progressive web app, web development services, app development services, UI/UX design, SEO optimization, website redesign, custom web development, website builder, web development cost, website design services, OTT platform development, React Native developer, website development near me, app developers India, app development cost, website maintenance, website hosting, web API development, WordPress developer, shopify developer, wix developer, web development agency, mobile app agency',
+  title: 'Full-Stack Web & App Development Agency | UFDev',
+  description: 'Custom web, mobile & OTT platform development by UFDev, founded by IIT Patna alumnus. React, React Native & Node.js expertise for startups & enterprises.',
+  keywords: ['web development', 'app development', 'react', 'react native', 'node.js', 'ott platform', 'full stack', 'software development', 'agency', 'iit patna'],
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
+    title: 'UFDev - Web & App Development Agency',
+    description: 'Custom software solutions by UFDev. Web apps, mobile apps & OTT platforms.',
     url: 'https://ufdevs.com',
-    site_name: 'UFDev Web & App Development',
-    title: 'Expert Web & Mobile App Development Services | UFDev',
-    description: 'Professional Web, Mobile App & OTT Development by IIT Patna graduate. Specializing in React, Node.js, Flutter. Best prices in Mumbai & India.',
+    siteName: 'UFDev',
     images: [
       {
-        url: '/ufdev.llc.png',
-        width: 800,
-        height: 600,
-        alt: 'UFDev Web & App Development Services by IIT Graduate',
+        url: 'https://ufdevs.com/og-image.png',
+        width: 1200,
+        height: 630,
       },
     ],
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     cardType: 'summary_large_image',
@@ -57,7 +57,7 @@ export const metadata = {
   ],
   creator: 'Ramesh Vishwakarma - IIT Patna Alumnus',
   publisher: 'UFDev LLC',
-  category: 'Web Development, App Development, OTT Platform Development',
+  category: 'Web Development, App Development, OTT Platform Development, React Development, Flutter App Development',
   icons: {
     icon: [
       {
@@ -92,9 +92,8 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
-  // Generate the rich JSON-LD data
-  const jsonLd = generateJsonLd();
+export default function RootLayout({ children, params }) {
+  const jsonLd = generateJsonLd('https://ufdevs.com', '/', metadata.title, metadata.description);
 
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
@@ -107,18 +106,13 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#10B981" />
 
-        {/* Enhanced Schema.org JSON-LD for better SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd)
-          }}
-        />
+        <Script id="json-ld" type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </Script>
       </head>
       <body className="antialiased">
-        <PageTransitionProvider>
-          {children}
-        </PageTransitionProvider>
+        {children}
+        <SpeedInsights />
       </body>
     </html>
   );

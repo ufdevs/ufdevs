@@ -4,7 +4,9 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowLeft, FiCalendar, FiUser, FiTag } from 'react-icons/fi';
-import { FaCheckCircle, FaMobileAlt, FaLaptopCode, FaTools } from 'react-icons/fa';
+import { FaCheckCircle, FaMobileAlt, FaLaptopCode, FaTools, FaReact, FaNodeJs, FaMobile, FaCode, FaDatabase, FaServer, FaDesktop, FaShoppingCart, FaUsers, FaNewspaper, FaPalette, FaToolbox, FaCogs, FaMoneyBillWave, FaChartLine, FaShieldAlt } from 'react-icons/fa';
+import { SiSwift, SiKotlin, SiFlutter, SiReactnative } from 'react-icons/si';
+import Script from 'next/script';
 
 export default function WebAppDevelopmentGuide() {
     useEffect(() => {
@@ -14,6 +16,46 @@ export default function WebAppDevelopmentGuide() {
 
     return (
         <main className="min-h-screen pt-28 pb-16">
+            <Script
+                id="web-app-dev-guide-jsonld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "TechArticle",
+                        "headline": "Complete Web & App Development Guide 2024 | Process & Technologies",
+                        "description": "Comprehensive guide to web and app development in 2024, covering technologies, processes, and best practices for building modern digital products from planning to deployment.",
+                        "image": "https://ufdev.com/images/og-image.jpg",
+                        "datePublished": "2024-04-17T10:00:00Z",
+                        "dateModified": "2024-04-19T12:00:00Z",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Ramesh Vishwakarma",
+                            "url": "https://ufdev.com/about/ramesh-vishwakarma-iit-patna"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "UFDev",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://ufdev.com/images/logo.png"
+                            }
+                        },
+                        "keywords": "web development process, app development guide, web and app development, frontend technologies, backend technologies, mobile app development, development lifecycle, web development cost, app development trends, React development, Node.js development, tech stack selection",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://ufdev.com/blog/web-app-development-guide"
+                        },
+                        "about": {
+                            "@type": "Thing",
+                            "name": "Web and App Development",
+                            "description": "Complete guide to the process, technologies, and best practices for developing websites and mobile applications in 2024."
+                        },
+                        "articleSection": "Technology",
+                        "wordCount": "5200"
+                    })
+                }}
+            />
             <div className="container mx-auto px-4">
                 <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6">
                     <FiArrowLeft className="mr-2" /> Back to Blog

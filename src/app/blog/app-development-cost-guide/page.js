@@ -3,8 +3,9 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiArrowLeft, FiCalendar, FiUser, FiTag } from 'react-icons/fi';
-import { FaDollarSign, FaChartLine, FaMobileAlt, FaCode, FaCheckSquare } from 'react-icons/fa';
+import { FiArrowLeft, FiCalendar, FiUser, FiTag, FiDollarSign } from 'react-icons/fi';
+import { FaCheckCircle, FaMobileAlt, FaMoneyBillWave, FaChartLine, FaGlobe, FaLaptopCode, FaCalculator, FaDatabase, FaCogs, FaServer, FaCreditCard, FaShieldAlt, FaTools, FaUserCog, FaCode, FaCloudUploadAlt, FaRocket, FaRegClock } from 'react-icons/fa';
+import Script from 'next/script';
 
 export default function AppDevelopmentCostGuide() {
     useEffect(() => {
@@ -14,6 +15,46 @@ export default function AppDevelopmentCostGuide() {
 
     return (
         <main className="min-h-screen pt-28 pb-16">
+            <Script
+                id="app-dev-cost-guide-jsonld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "TechArticle",
+                        "headline": "App Development Cost Guide 2024 | Pricing Factors & Estimates",
+                        "description": "Comprehensive guide to app development costs in 2024, covering all pricing factors, cost breakdowns by app type and region, hidden expenses, and budget optimization strategies.",
+                        "image": "https://ufdev.com/images/og-image.jpg",
+                        "datePublished": "2024-04-18T10:00:00Z",
+                        "dateModified": "2024-04-19T12:00:00Z",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Ramesh Vishwakarma",
+                            "url": "https://ufdev.com/about/ramesh-vishwakarma-iit-patna"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "UFDev",
+                            "logo": {
+                                "@type": "ImageObject",
+                                "url": "https://ufdev.com/images/logo.png"
+                            }
+                        },
+                        "keywords": "app development cost, mobile app budget, app pricing factors, React Native development cost, iOS app cost, Android app cost, app development pricing guide, custom app development cost, enterprise app budget, app development ROI, offshore app development pricing, app cost optimization",
+                        "mainEntityOfPage": {
+                            "@type": "WebPage",
+                            "@id": "https://ufdev.com/blog/app-development-cost-guide"
+                        },
+                        "about": {
+                            "@type": "Thing",
+                            "name": "App Development Costs",
+                            "description": "Detailed analysis of all factors affecting mobile app development costs in 2024, including development approach, complexity, features, platform choices, and geographical factors."
+                        },
+                        "articleSection": "Technology",
+                        "wordCount": "4800"
+                    })
+                }}
+            />
             <div className="container mx-auto px-4">
                 <Link href="/blog" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6">
                     <FiArrowLeft className="mr-2" /> Back to Blog
@@ -69,7 +110,7 @@ export default function AppDevelopmentCostGuide() {
                     <div className="flex items-center justify-center my-10">
                         <div className="grid grid-cols-3 gap-6 text-center">
                             <div className="p-6 bg-blue-50 rounded-lg">
-                                <FaDollarSign className="text-5xl text-blue-500 mx-auto mb-3" />
+                                <FiDollarSign className="text-5xl text-blue-500 mx-auto mb-3" />
                                 <h3 className="text-lg font-bold">Basic App</h3>
                                 <p className="text-gray-700">$10K - $50K</p>
                             </div>
@@ -79,7 +120,7 @@ export default function AppDevelopmentCostGuide() {
                                 <p className="text-gray-700">$50K - $120K</p>
                             </div>
                             <div className="p-6 bg-indigo-50 rounded-lg">
-                                <FaCode className="text-5xl text-indigo-500 mx-auto mb-3" />
+                                <FaCheckCircle className="text-5xl text-indigo-500 mx-auto mb-3" />
                                 <h3 className="text-lg font-bold">Complex App</h3>
                                 <p className="text-gray-700">$120K - $300K+</p>
                             </div>
@@ -383,23 +424,23 @@ export default function AppDevelopmentCostGuide() {
                         <h3 className="text-xl font-bold mb-3">Cost-Saving Strategies</h3>
                         <ul className="space-y-2">
                             <li className="flex items-start">
-                                <FaCheckSquare className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                                <FaCheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 <span><strong>Use cross-platform frameworks</strong> like React Native or Flutter to target multiple platforms with one codebase.</span>
                             </li>
                             <li className="flex items-start">
-                                <FaCheckSquare className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                                <FaCheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 <span><strong>Consider ready-made solutions</strong> for common features rather than building everything from scratch.</span>
                             </li>
                             <li className="flex items-start">
-                                <FaCheckSquare className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                                <FaCheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 <span><strong>Implement agile development methodology</strong> to adapt quickly and reduce waste.</span>
                             </li>
                             <li className="flex items-start">
-                                <FaCheckSquare className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                                <FaCheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 <span><strong>Leverage cloud services</strong> instead of building custom infrastructure.</span>
                             </li>
                             <li className="flex items-start">
-                                <FaCheckSquare className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                                <FaCheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0" />
                                 <span><strong>Partner with an experienced development team</strong> that can foresee potential issues and avoid costly mistakes.</span>
                             </li>
                         </ul>
