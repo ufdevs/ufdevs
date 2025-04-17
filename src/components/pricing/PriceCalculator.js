@@ -41,7 +41,7 @@ const PriceCalculator = () => {
             id: 'development',
             title: 'Development',
             description: 'Frontend and backend development, API integration',
-            basePrice: 35000,
+            basePrice: 30000,
             baseDays: 25,
             icon: <FiCode className="text-2xl mb-2" />
         },
@@ -49,7 +49,7 @@ const PriceCalculator = () => {
             id: 'deployment',
             title: 'Deployment',
             description: 'Testing, QA, and production deployment',
-            basePrice: 18000,
+            basePrice: 15000,
             baseDays: 20,
             icon: <FiServer className="text-2xl mb-2" />
         },
@@ -57,7 +57,7 @@ const PriceCalculator = () => {
             id: 'growth',
             title: 'Growth Strategy',
             description: 'SEO, analytics setup, and performance optimization',
-            basePrice: 15000,
+            basePrice: 12000,
             baseDays: 8,
             icon: <FiSettings className="text-2xl mb-2" />
         }
