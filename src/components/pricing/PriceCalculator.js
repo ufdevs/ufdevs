@@ -25,7 +25,7 @@ const PriceCalculator = () => {
             id: 'idea',
             title: 'Idea Validation',
             description: 'Market research, competitor analysis, and feasibility study',
-            basePrice: 3000,
+            basePrice: 8000,
             baseDays: 5,
             icon: <FiCheckCircle className="text-2xl mb-2" />
         },
@@ -33,7 +33,7 @@ const PriceCalculator = () => {
             id: 'design',
             title: 'UI/UX Design',
             description: 'Wireframes, prototypes, and user experience design',
-            basePrice: 5000,
+            basePrice: 10000,
             baseDays: 7,
             icon: <FiMonitor className="text-2xl mb-2" />
         },
@@ -41,7 +41,7 @@ const PriceCalculator = () => {
             id: 'development',
             title: 'Development',
             description: 'Frontend and backend development, API integration',
-            basePrice: 25000,
+            basePrice: 35000,
             baseDays: 25,
             icon: <FiCode className="text-2xl mb-2" />
         },
@@ -49,7 +49,7 @@ const PriceCalculator = () => {
             id: 'deployment',
             title: 'Deployment',
             description: 'Testing, QA, and production deployment',
-            basePrice: 10000,
+            basePrice: 18000,
             baseDays: 20,
             icon: <FiServer className="text-2xl mb-2" />
         },
@@ -57,7 +57,7 @@ const PriceCalculator = () => {
             id: 'growth',
             title: 'Growth Strategy',
             description: 'SEO, analytics setup, and performance optimization',
-            basePrice: 10000,
+            basePrice: 15000,
             baseDays: 8,
             icon: <FiSettings className="text-2xl mb-2" />
         }
@@ -86,12 +86,12 @@ const PriceCalculator = () => {
 
     // Backend options
     const backendOptions = [
-        { id: 'none', label: 'None', icon: <FiZap className="text-lg mr-2" />, multiplier: 1 },
-        { id: 'firebase', label: 'Firebase', icon: <FiServer className="text-lg mr-2" />, multiplier: 1 },
+        { id: 'none', label: 'None', icon: <FiZap className="text-lg mr-2" />, multiplier: 1.2 },
+        { id: 'firebase', label: 'Firebase', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.4 },
         { id: 'php', label: 'PHP', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.5 },
-        { id: 'node', label: 'Node.js', icon: <FiServer className="text-lg mr-2" />, multiplier: 1 },
-        { id: 'django', label: 'Django', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.2 },
-        { id: 'both', label: 'Node.js + Django', icon: <FiCheckCircle className="text-lg mr-2" />, multiplier: 2 }
+        { id: 'node', label: 'Node.js', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.6 },
+        { id: 'django', label: 'Django', icon: <FiServer className="text-lg mr-2" />, multiplier: 1.8 },
+        { id: 'both', label: 'Node.js + Django', icon: <FiCheckCircle className="text-lg mr-2" />, multiplier: 2.2 }
     ];
 
     // Complexity multipliers
