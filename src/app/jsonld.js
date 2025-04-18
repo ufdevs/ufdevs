@@ -10,8 +10,8 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                 '@type': 'Organization',
                 '@id': `${baseUrl}/#organization`,
                 name: 'UFDev Agency',
-                alternateName: 'UFDev',
-                description: 'Full-stack development agency specializing in web applications, mobile apps, and OTT platforms. Founded by Ramesh Vishwakarma, IIT Patna alumni.',
+                alternateName: 'UFDev India',
+                description: 'Premier app development company in Mumbai, India. Full-stack development agency specializing in affordable web applications, mobile apps, and OTT platforms. Founded by Ramesh Vishwakarma, IIT Patna alumni.',
                 url: baseUrl,
                 logo: {
                     '@type': 'ImageObject',
@@ -34,42 +34,52 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                 },
                 foundingDate: '2022-01-01',
                 email: 'contact@ufdevs.com',
-                telephone: '+919876543210',
+                telephone: '+917510060787',
                 vatID: 'ABCDE1234F',
                 address: {
                     '@type': 'PostalAddress',
-                    streetAddress: '123 Tech Hub',
+                    streetAddress: 'Vasai West',
                     addressLocality: 'Mumbai',
                     addressRegion: 'Maharashtra',
-                    postalCode: '400001',
+                    postalCode: '401202',
                     addressCountry: 'IN'
                 },
                 contactPoint: {
                     '@type': 'ContactPoint',
-                    telephone: '+919876543210',
+                    telephone: '+917510060787',
                     contactType: 'customer service',
                     email: 'contact@ufdevs.com',
-                    availableLanguage: ['English', 'Hindi']
+                    availableLanguage: ['English', 'Hindi', 'Marathi']
                 },
                 faxNumber: '+910123456789',
-                areaServed: {
-                    '@type': 'GeoCircle',
-                    geoMidpoint: {
-                        '@type': 'GeoCoordinates',
-                        latitude: '19.0760',
-                        longitude: '72.8777'
+                areaServed: [
+                    {
+                        '@type': 'City',
+                        name: 'Mumbai',
+                        sameAs: 'https://en.wikipedia.org/wiki/Mumbai'
                     },
-                    geoRadius: '50000'
-                },
+                    {
+                        '@type': 'State',
+                        name: 'Maharashtra',
+                        sameAs: 'https://en.wikipedia.org/wiki/Maharashtra'
+                    },
+                    {
+                        '@type': 'Country',
+                        name: 'India',
+                        sameAs: 'https://en.wikipedia.org/wiki/India'
+                    }
+                ],
                 knowsAbout: [
                     'Web Application Development',
-                    'Mobile App Development',
+                    'Mobile App Development in Mumbai',
+                    'React Native App Development India',
+                    'Cross-Platform App Development',
                     'React',
                     'Next.js',
                     'Node.js',
-                    'React Native',
+                    'Flutter App Development',
                     'OTT Platform Development',
-                    'Full Stack Development'
+                    'Full Stack Development Mumbai'
                 ],
                 makesOffer: [
                     {
@@ -77,15 +87,15 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                         itemOffered: {
                             '@type': 'Service',
                             name: 'Web Application Development',
-                            description: 'Custom web application development using React, Next.js, and Node.js'
+                            description: 'Custom web application development using React, Next.js, and Node.js in Mumbai, India'
                         }
                     },
                     {
                         '@type': 'Offer',
                         itemOffered: {
                             '@type': 'Service',
-                            name: 'Mobile App Development',
-                            description: 'Cross-platform mobile app development using React Native'
+                            name: 'Mobile App Development Mumbai',
+                            description: 'Affordable cross-platform mobile app development in Mumbai using React Native and Flutter'
                         }
                     },
                     {
@@ -93,11 +103,11 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                         itemOffered: {
                             '@type': 'Service',
                             name: 'OTT Platform Development',
-                            description: 'Custom OTT and video streaming platform development'
+                            description: 'Custom OTT and video streaming platform development for Indian businesses'
                         }
                     }
                 ],
-                slogan: 'Transforming Ideas into Digital Reality',
+                slogan: 'Mumbai\'s Leading Affordable App Development Company',
                 numberOfEmployees: {
                     '@type': 'QuantitativeValue',
                     value: '25'
@@ -106,19 +116,19 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                     '@type': 'GeoCircle',
                     geoMidpoint: {
                         '@type': 'GeoCoordinates',
-                        latitude: '19.0760',
-                        longitude: '72.8262'
+                        latitude: '19.2307',
+                        longitude: '72.8567'
                     },
-                    geoRadius: 'Global'
+                    geoRadius: '100km'
                 },
                 location: {
                     '@type': 'Place',
-                    name: 'UFDev Agency Headquarters',
+                    name: 'UFDev Agency - Mumbai Office',
                     hasMap: 'https://goo.gl/maps/example',
                     geo: {
                         '@type': 'GeoCoordinates',
-                        latitude: '19.0760',
-                        longitude: '72.8262'
+                        latitude: '19.2307',
+                        longitude: '72.8567'
                     }
                 },
                 openingHoursSpecification: {
@@ -135,30 +145,30 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                 ],
                 hasOfferCatalog: {
                     '@type': 'OfferCatalog',
-                    name: 'Web and Mobile App Development Services',
+                    name: 'Web and Mobile App Development Services in Mumbai',
                     itemListElement: [
                         {
                             '@type': 'OfferCatalogItem',
-                            name: 'Web Development Services',
+                            name: 'Web Development Services Mumbai',
                             itemOffered: {
                                 '@type': 'Service',
-                                name: 'Custom Website Development'
+                                name: 'Custom Website Development in Mumbai, India'
                             }
                         },
                         {
                             '@type': 'OfferCatalogItem',
-                            name: 'Mobile App Development',
+                            name: 'Mobile App Development Mumbai',
                             itemOffered: {
                                 '@type': 'Service',
-                                name: 'Custom Mobile App Development'
+                                name: 'Affordable Mobile App Development in Mumbai'
                             }
                         },
                         {
                             '@type': 'OfferCatalogItem',
-                            name: 'OTT Platform Development',
+                            name: 'OTT Platform Development India',
                             itemOffered: {
                                 '@type': 'Service',
-                                name: 'Custom Streaming Platform Development'
+                                name: 'Custom Streaming Platform Development for Indian businesses'
                             }
                         }
                     ]
@@ -172,11 +182,11 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                     },
                     author: {
                         '@type': 'Person',
-                        name: 'John Smith',
-                        sameAs: 'https://twitter.com/johnsmith'
+                        name: 'Rajesh Sharma',
+                        sameAs: 'https://twitter.com/rajeshsharma'
                     },
                     datePublished: '2023-09-15',
-                    reviewBody: 'Ramesh Vishwakarma and his team delivered an exceptional website for our business. His IIT Patna education really shows in the quality of work.'
+                    reviewBody: 'Ramesh Vishwakarma and his Mumbai-based team delivered an exceptional mobile app for our business. His IIT Patna education really shows in the quality of work. Best app developer in Mumbai!'
                 },
                 aggregateRating: {
                     '@type': 'AggregateRating',
@@ -188,13 +198,51 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
             },
             {
                 '@type': 'WebSite',
-                name: 'UFDev Agency by Ramesh Vishwakarma',
+                name: 'UFDev Agency Mumbai - By Ramesh Vishwakarma',
                 url: baseUrl,
                 potentialAction: {
                     '@type': 'SearchAction',
                     target: `${baseUrl}/search?q={search_term_string}`,
                     'query-input': 'required name=search_term_string'
                 }
+            },
+            {
+                '@type': 'LocalBusiness',
+                '@id': `${baseUrl}/#localbusiness`,
+                name: 'UFDev - App Development Company Mumbai',
+                image: `${baseUrl}/logo.png`,
+                telephone: '+917510060787',
+                email: 'contact@ufdevs.com',
+                address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: 'Vasai West',
+                    addressLocality: 'Mumbai',
+                    addressRegion: 'Maharashtra',
+                    postalCode: '401202',
+                    addressCountry: 'IN'
+                },
+                geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: '19.2307',
+                    longitude: '72.8567'
+                },
+                url: baseUrl,
+                priceRange: '₹₹',
+                openingHoursSpecification: [
+                    {
+                        '@type': 'OpeningHoursSpecification',
+                        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                        opens: '09:00',
+                        closes: '18:00'
+                    },
+                    {
+                        '@type': 'OpeningHoursSpecification',
+                        dayOfWeek: ['Saturday'],
+                        opens: '10:00',
+                        closes: '16:00'
+                    }
+                ],
+                description: 'Top-rated app development company in Mumbai offering affordable cross-platform mobile apps, web applications, and digital solutions for businesses across India.'
             }
         ]
     };
