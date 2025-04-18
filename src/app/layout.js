@@ -1,6 +1,5 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import { generateJsonLd } from './jsonld';
 
@@ -112,7 +111,6 @@ export default function RootLayout({ children, params }) {
       </head>
       <body className="antialiased">
         {children}
-        <SpeedInsights />
       </body>
     </html>
   );
