@@ -47,8 +47,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Save 40-60% on Your Business App Development | UFDev',
-        description:
-            'Get your app on iOS, Android & Windows for less than you'd pay for a single platform.Fast delivery, native experience.Request a free quote today!',
+        description: 'Get your app on iOS, Android & Windows for less than you would pay for a single platform. Fast delivery, native experience. Request a free quote today!',
         images: ['https://ufdev.llc/images/twitter/mobile-apps.jpg'],
         creator: '@ufdev_llc',
     },
