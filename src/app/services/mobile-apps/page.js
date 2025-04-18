@@ -2,7 +2,8 @@
 
 import { useEffect } from 'react';
 import { FaApple, FaAndroid, FaWindows, FaCode, FaRocket, FaCreditCard, FaUsers, FaLightbulb, FaChartLine } from 'react-icons/fa';
-import { SiReact, SiFlutter, SiXamarin } from 'react-icons/si';
+import { SiReact, SiFlutter } from 'react-icons/si';
+import { DiDotnet } from 'react-icons/di';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -119,8 +120,8 @@ export default function MobileAppsPage() {
                             </div>
                         </div>
                         <div className="border border-gray-200 dark:border-gray-700 p-8 rounded-lg text-center">
-                            <SiXamarin className="text-6xl mx-auto mb-4 text-blue-800" />
-                            <h3 className="text-xl font-semibold mb-3">Xamarin</h3>
+                            <DiDotnet className="text-6xl mx-auto mb-4 text-blue-800" />
+                            <h3 className="text-xl font-semibold mb-3">.NET MAUI</h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-4">Microsoft's cross-platform solution for business apps needing deep Windows integration while still supporting iOS and Android.</p>
                             <div className="text-sm text-gray-500 dark:text-gray-400">
                                 <p>Perfect for: Enterprise apps, Windows integration</p>
@@ -200,7 +201,7 @@ export default function MobileAppsPage() {
                                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white z-10 md:absolute md:left-1/2 md:-ml-4">3</div>
                                 <div className="md:w-1/2 md:pr-8 md:text-right pt-4 md:pt-0 md:mr-4">
                                     <h3 className="text-xl font-semibold mb-2">Development</h3>
-                                    <p className="text-gray-600 dark:text-gray-400">Our cross-platform experts build your app using React Native, Flutter, or Xamarin, focusing on performance and user experience.</p>
+                                    <p className="text-gray-600 dark:text-gray-400">Our cross-platform experts build your app using React Native, Flutter, or .NET MAUI, focusing on performance and user experience.</p>
                                 </div>
                                 <div className="hidden md:block md:w-1/2 md:pl-8"></div>
                             </div>
