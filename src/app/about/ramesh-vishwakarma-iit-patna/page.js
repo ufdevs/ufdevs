@@ -3,8 +3,9 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiArrowLeft, FiLinkedin, FiGithub, FiMail, FiPhone, FiAward, FiCode, FiMonitor, FiSmartphone } from 'react-icons/fi';
+import { FiArrowLeft, FiLinkedin, FiGithub, FiMail, FiPhone, FiAward, FiCode, FiMonitor, FiSmartphone, FiExternalLink } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import SectionReveal from '../../../components/common/SectionReveal';
 
 export default function RameshVishwakarmaPage() {
     useEffect(() => {
@@ -13,204 +14,304 @@ export default function RameshVishwakarmaPage() {
     }, []);
 
     const skills = [
-        { name: 'Frontend Development', items: ['React', 'Next.js', 'Vue.js', 'HTML/CSS', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'Framer Motion'] },
-        { name: 'Backend Development', items: ['Node.js', 'Express', 'Django', 'PHP', 'Java', 'Python', 'RESTful APIs', 'GraphQL'] },
-        { name: 'Database & Cloud', items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'AWS', 'Google Cloud', 'Azure', 'Vercel'] },
-        { name: 'Mobile Development', items: ['React Native', 'Flutter', 'iOS (Swift)', 'Android (Kotlin)', 'Expo', 'Ionic'] },
-        { name: 'DevOps & Tools', items: ['Git', 'Docker', 'CI/CD', 'Kubernetes', 'Jenkins', 'Jira', 'Figma', 'Adobe XD'] }
+        { name: 'Languages', items: ['Python', 'JavaScript', 'Dart', 'Java', 'XML'] },
+        { name: 'Frameworks', items: ['Next.js', 'Tailwind CSS', 'React.js', 'Flutter (MVVM)', 'Node.js (MVC)'] },
+        { name: 'Cloud & Database', items: ['MongoDB', 'Firebase', 'AWS', 'Docker'] },
+        { name: 'Platforms', items: ['VS Code', 'Android Studio', 'IntelliJ IDEA', 'Cursor AI'] },
+        { name: 'DevOps & Tools', items: ['GitHub', 'Prompt Engineering', 'Project Management', 'Coordination'] },
+        { name: 'AI & Advanced', items: ['GenAI Integration', 'LLM APIs', 'AWS MediaConvert', 'Video Processing'] }
     ];
 
     const projects = [
         {
             title: "iMaxx TV OTT Platform",
-            description: "A cutting-edge OTT platform with multiple monetization models, supporting content creators and viewers with seamless multi-device streaming.",
+            description: "Developed IMAXX TV OTT info site, implemented AWS MediaConvert for video transcoding, managed admin panel, collaborated on bug fixes, and deployed app to Google Play and Apple App Store.",
             link: "/portfolio/imaxx-tv-ott",
-            technologies: ["React", "Node.js", "Firebase", "AWS"]
+            technologies: ["React", "Node.js", "Firebase", "AWS"],
+            value: "₹8 Lakh+"
         },
         {
-            title: "E-Commerce Solutions",
-            description: "Built scalable e-commerce platforms with secure payment processing, inventory management, and analytics dashboards.",
-            link: "/portfolio",
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"]
+            title: "Employee Management Service",
+            description: "Developed EmpowerHR backend using Node.js, Express, and MongoDB. Implemented RBA, JWT, secure login with device lock, and integrated geolocation, photo verification, and Stripe payments.",
+            link: "https://servs.ufdevs.me",
+            technologies: ["Node.js", "React.js", "MongoDB", "Express"],
+            value: "₹3 Lakh+"
         },
         {
-            title: "Mobile App Development",
-            description: "Developed cross-platform mobile applications for iOS and Android with seamless performance and native feel.",
-            link: "/portfolio",
-            technologies: ["Flutter", "React Native", "Firebase", "REST APIs"]
+            title: "Video Processing Pipeline (SaaS)",
+            description: "Developed a video transcoding app with RESTful API integration and dynamic configuration for AWS, Docker, Ffmpeg.",
+            link: "https://drive.google.com/file/d/1-CRCZvmJ-kW_NVJbj0zx6-0aGC24Up0r/view",
+            technologies: ["Node.js", "Next.js", "AWS", "Docker"],
+            value: "₹2.5 Lakh+"
+        },
+        {
+            title: "Employee Management System",
+            description: "Built an employee management system with dynamic routing and responsive UI. Focused on maintainability with clean code and refactoring, MVVM Architecture.",
+            link: "https://drive.google.com/file/d/1-AuxAmq4-4ZOim1BvaTdmL-2OmNDc6Nh/view",
+            technologies: ["Flutter", "Firebase"],
+            value: "₹1.5 Lakh+"
         }
     ];
 
     const experiences = [
         {
-            position: "Founder & Lead Developer",
-            company: "UFDev Agency",
-            period: "2020 - Present",
-            description: "Founded and leading a development agency that specializes in web and mobile application development, with a focus on OTT platforms, e-commerce solutions, and custom software."
+            position: "Core Developer & Tech Head",
+            company: "UFDevs (Unfiltered Developers)",
+            period: "2022 - Present",
+            description: "Leading all technical aspects of development at UFDevs, managing services and overseeing project implementation. Specializing in premium web and mobile applications with GenAI integration and advanced features."
         },
         {
-            position: "Software Engineer",
-            company: "Tech Innovations Ltd.",
-            period: "2018 - 2020",
-            description: "Led the development of multiple web and mobile applications using React, Node.js, and AWS. Implemented CI/CD pipelines and improved system architecture."
+            position: "Training Sub Coordinator Web Dev",
+            company: "GigX IITP",
+            period: "April 2025 - Present (Freelancing)",
+            description: "Assist in training delivery, assign tasks, track student progress, resolve doubts, ensure engagement, and coordinate with the core team for effective web development program execution."
         },
         {
-            position: "Student Researcher",
-            company: "IIT Patna",
-            period: "2016 - 2018",
-            description: "Conducted research on distributed systems and cloud computing. Published a paper on efficient resource allocation in cloud environments."
+            position: "Technical Specialist",
+            company: "Imaxx Tv Digital PVT LTD",
+            period: "Feb 2025 - April 2025",
+            description: "Developed IMAXX TV info site, used AWS MediaConvert, managed admin panel, fixed bugs, and deployed apps to Play Store & App Store, coordinated with the CEO."
+        },
+        {
+            position: "Technical Support & Data Entry",
+            company: "DITRP OPC PVT LTD",
+            period: "May 2024 - Sep 2024",
+            description: "Trained 2000+ users, updated website data, resolved client issues, coordinated with the CEO, and supported software testing."
+        },
+        {
+            position: "Participant",
+            company: "IIT Patna, CEP",
+            period: "2025",
+            description: "Active member of the Technology Club at IIT Patna's Continuing Education Program. Recognized for technical excellence, winning 2nd place in the Hack4बिहार hackathon for developing functionality described as 'smooth as poetry in code'."
         }
     ];
 
     const education = [
         {
-            degree: "Bachelor of Technology in Computer Science",
+            degree: "BS in Computer Science & Data Analytics",
             institution: "Indian Institute of Technology Patna",
-            period: "2014 - 2018",
-            details: "Graduated with honors. Specialized in Distributed Systems and Cloud Computing."
+            period: "Dec 2024 - Dec 2028",
+            details: "Currently enrolled in the BS program at IIT Patna. Student ID: IITP/UG/2024-25/16956."
+        },
+        {
+            degree: "BSc (Hons) in Mathematics",
+            institution: "Viva College, Mumbai",
+            period: "Apr 2023 - Apr 2026",
+            details: "Pursuing honors degree in Mathematics with focus on computational mathematics and statistics."
         }
     ];
 
+    const achievements = [
+        "2nd Place in Web Development Competition at IIT Patna, Mar 2025 - Certificate: <a href='https://drive.google.com/file/d/1-EuIRlb_dzSNFMGtFYjjfMG6-lwblqb9/view' target='_blank' rel='noopener noreferrer' class='text-emerald-600 hover:underline'>View Certificate</a>",
+        "2nd Place in Full Stack Web Dev Competition at IIT Patna, May 2025 - Certificate: <a href='https://drive.google.com/file/d/1zGZx9w3B-H29oKb3MigIy1qKinDH4lw0/view' target='_blank' rel='noopener noreferrer' class='text-emerald-600 hover:underline'>View Certificate</a>",
+        "2nd Place in Hack4बिहार Hackathon - Recognized for 'functionality so smooth, it's like poetry in code'",
+        "Featured in Technology Club IIT Patna's showcase of top developers",
+        "Developed multiple high-profile projects with valuations exceeding industry standards"
+    ];
+
     return (
-        <main className="min-h-screen pt-28 pb-16">
+        <main className="min-h-screen pt-28 pb-16 bg-dark-900 text-white">
             <div className="container mx-auto px-4">
                 {/* Back link */}
-                <Link href="/about" className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8">
+                <Link href="/about" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8">
                     <FiArrowLeft className="mr-2" /> Back to About
                 </Link>
 
                 {/* Profile Header */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                    <div className="md:col-span-1">
-                        <div className="bg-gradient-to-r from-blue-100 to-teal-100 p-2 rounded-xl">
-                            <div className="relative h-80 bg-gradient-to-r from-blue-500 to-teal-500 rounded-lg overflow-hidden">
-                                {/* Replace with actual image */}
-                                <div className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
-                                    Ramesh Vishwakarma
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div className="md:col-span-1">
+                            <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-3 rounded-xl shadow-lg">
+                                <div className="relative h-96 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg overflow-hidden">
+                                    <img 
+                                        src="/rameshvishwakarma.jpeg" 
+                                        alt="Ramesh Vishwakarma - IIT Patna" 
+                                        className="w-full h-full object-cover object-center"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-40"></div>
+                                </div>
+                            </div>
+                            <div className="mt-6 space-y-4">
+                                <div className="flex items-center">
+                                    <FiMail className="text-emerald-400 mr-3" />
+                                    <a href="mailto:rameshnda09@gmail.com" className="text-gray-300 hover:text-emerald-400">rameshnda09@gmail.com</a>
+                                </div>
+                                <div className="flex items-center">
+                                    <FiPhone className="text-emerald-400 mr-3" />
+                                    <a href="tel:+917510060787" className="text-gray-300 hover:text-emerald-400">+91 751 006 0787</a>
+                                </div>
+                                <div className="flex space-x-4 mt-4">
+                                    <a
+                                        href="https://www.linkedin.com/in/ramesh-vishwakarma-957355234/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-dark-800 hover:bg-dark-700 text-emerald-400 p-2 rounded-full transition"
+                                    >
+                                        <FiLinkedin size={20} />
+                                    </a>
+                                    <a
+                                        href="https://ufdevs.me"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-dark-800 hover:bg-dark-700 text-emerald-400 p-2 rounded-full transition"
+                                    >
+                                        <FiExternalLink size={20} />
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-6 space-y-4">
-                            <div className="flex items-center">
-                                <FiMail className="text-blue-500 mr-3" />
-                                <a href="mailto:info@ufdev.com" className="text-gray-700 hover:text-blue-600">info@ufdev.com</a>
+
+                        <div className="md:col-span-2">
+                            <div className="mb-6">
+                                <h1 className="text-4xl font-bold mb-2 text-white">Ramesh Vishwakarma</h1>
+                                <p className="text-xl text-emerald-400 mb-4">Core Developer & Tech Head | IIT Patna</p>
+                                <p className="text-gray-300 mb-6">
+                                    Experienced full-stack developer and technical leader at UFDevs (Unfiltered Developers), managing all aspects of development services. 
+                                    Currently pursuing BS in Computer Science & Data Analytics at the prestigious Indian Institute of Technology Patna, 
+                                    with expertise in building premium web and mobile applications.
+                                </p>
+                                <p className="text-gray-300 mb-6">
+                                    As the core developer and tech head at UFDevs, I oversee the development of high-value projects starting at ₹30,000, with 
+                                    some projects valued at ₹3 Lakh to ₹8 Lakh. My specialization includes GenAI integration, creating scalable architectures, 
+                                    and implementing cutting-edge technologies across various platforms.
+                                </p>
+                                <p className="text-gray-300">
+                                    Recognized for technical excellence at IIT Patna, including multiple 2nd place finishes in web development competitions and hackathons. 
+                                    My work has been described as having "functionality so smooth, it's like poetry in code." I bring academic rigor and practical expertise to every project.
+                                </p>
                             </div>
-                            <div className="flex items-center">
-                                <FiPhone className="text-blue-500 mr-3" />
-                                <a href="tel:+917510060787" className="text-gray-700 hover:text-blue-600">+91 751 006 0787</a>
+
+                            <div className="flex flex-wrap gap-3 mb-8">
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">React</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">Node.js</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">GenAI</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">AWS</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">MongoDB</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">Flutter</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">IIT Patna</span>
+                                <span className="bg-emerald-900/30 text-emerald-400 text-sm px-3 py-1 rounded-full">Python</span>
                             </div>
-                            <div className="flex space-x-4 mt-4">
-                                <a
-                                    href="https://linkedin.com/in/ramesh-vishwakarma-iitp"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-blue-100 hover:bg-blue-200 text-blue-600 p-2 rounded-full transition"
+
+                            <div className="mb-8">
+                                <Link
+                                    href="/contact"
+                                    className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 inline-flex items-center justify-center font-medium shadow-lg shadow-emerald-900/20"
                                 >
-                                    <FiLinkedin size={20} />
-                                </a>
-                                <a
-                                    href="https://github.com/ufdevs"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-blue-100 hover:bg-blue-200 text-blue-600 p-2 rounded-full transition"
-                                >
-                                    <FiGithub size={20} />
-                                </a>
+                                    Contact Me
+                                </Link>
                             </div>
                         </div>
                     </div>
+                </SectionReveal>
 
-                    <div className="md:col-span-2">
-                        <div className="mb-6">
-                            <h1 className="text-4xl font-bold mb-2">Ramesh Vishwakarma</h1>
-                            <p className="text-xl text-blue-600 mb-4">Full Stack Developer & IIT Patna Alumnus</p>
-                            <p className="text-gray-700 mb-6">
-                                Experienced full-stack developer with a strong background in web and mobile application development.
-                                Alumnus of the prestigious Indian Institute of Technology Patna, with expertise in building scalable,
-                                high-performance applications, particularly OTT platforms, e-commerce solutions, and custom software.
-                            </p>
-                            <p className="text-gray-700 mb-6">
-                                As the founder of UFDev Agency, I lead a team of talented developers in creating innovative digital
-                                solutions for clients across various industries. My approach combines technical excellence with a
-                                deep understanding of business needs to deliver products that exceed expectations.
-                            </p>
-                            <p className="text-gray-700">
-                                I specialize in React, Node.js, Firebase, and AWS, with a strong focus on creating seamless user
-                                experiences across web and mobile platforms. My IIT Patna education has provided a solid foundation
-                                in computer science principles that informs my practical development work.
-                            </p>
+                {/* Secondary Image */}
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.1}
+                    className="mb-16"
+                >
+                    <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-3 rounded-xl shadow-lg">
+                        <div className="h-96 overflow-hidden rounded-lg relative">
+                            <img 
+                                src="/ramesh2.jpeg" 
+                                alt="Ramesh Vishwakarma - Working" 
+                                className="w-full h-full object-cover object-center"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-30"></div>
                         </div>
-
-                        <div className="flex flex-wrap gap-3 mb-8">
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">React</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Node.js</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Firebase</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">AWS</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">MongoDB</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Flutter</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">IIT Patna</span>
-                            <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Full Stack</span>
-                        </div>
-
-                        <div className="mb-8">
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
-                            >
-                                Contact Me
-                            </Link>
+                        <div className="text-center mt-3 text-gray-300 text-sm">
+                            Ramesh Vishwakarma working on a high-value enterprise project at UFDevs
                         </div>
                     </div>
-                </div>
+                </SectionReveal>
+
+                {/* Achievements Section */}
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.2}
+                    className="mb-16"
+                >
+                    <h2 className="text-2xl font-bold mb-6 border-b border-dark-700 pb-2 text-white">Achievements & Recognition</h2>
+                    <div className="bg-dark-800 p-6 rounded-xl">
+                        <ul className="space-y-4">
+                            {achievements.map((achievement, index) => (
+                                <li key={index} className="flex items-start">
+                                    <FiAward className="text-emerald-400 mt-1 mr-3 flex-shrink-0" />
+                                    <span className="text-gray-300" dangerouslySetInnerHTML={{ __html: achievement }}></span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </SectionReveal>
 
                 {/* Experience Section */}
-                <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 border-b pb-2">Professional Experience</h2>
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.3}
+                    className="mb-16"
+                >
+                    <h2 className="text-2xl font-bold mb-6 border-b border-dark-700 pb-2 text-white">Professional Experience</h2>
                     <div className="space-y-8">
                         {experiences.map((exp, index) => (
                             <div key={index} className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                 <div className="md:col-span-1">
-                                    <p className="text-gray-500 text-sm">{exp.period}</p>
+                                    <p className="text-gray-400 text-sm">{exp.period}</p>
                                 </div>
                                 <div className="md:col-span-3">
-                                    <h3 className="text-xl font-semibold">{exp.position}</h3>
-                                    <p className="text-blue-600 mb-2">{exp.company}</p>
-                                    <p className="text-gray-700">{exp.description}</p>
+                                    <h3 className="text-xl font-semibold text-white">{exp.position}</h3>
+                                    <p className="text-emerald-400 mb-2">{exp.company}</p>
+                                    <p className="text-gray-300">{exp.description}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-                </section>
+                </SectionReveal>
 
                 {/* Education Section */}
-                <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 border-b pb-2">Education</h2>
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.4}
+                    className="mb-16"
+                >
+                    <h2 className="text-2xl font-bold mb-6 border-b border-dark-700 pb-2 text-white">Education</h2>
                     <div className="space-y-8">
                         {education.map((edu, index) => (
                             <div key={index} className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                 <div className="md:col-span-1">
-                                    <p className="text-gray-500 text-sm">{edu.period}</p>
+                                    <p className="text-gray-400 text-sm">{edu.period}</p>
                                 </div>
                                 <div className="md:col-span-3">
-                                    <h3 className="text-xl font-semibold">{edu.degree}</h3>
-                                    <p className="text-blue-600 mb-2">{edu.institution}</p>
-                                    <p className="text-gray-700">{edu.details}</p>
+                                    <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+                                    <p className="text-emerald-400 mb-2">{edu.institution}</p>
+                                    <p className="text-gray-300">{edu.details}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-                </section>
+                </SectionReveal>
 
                 {/* Skills Section */}
-                <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 border-b pb-2">Technical Skills</h2>
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.5}
+                    className="mb-16"
+                >
+                    <h2 className="text-2xl font-bold mb-6 border-b border-dark-700 pb-2 text-white">Technical Skills</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {skills.map((skillGroup, index) => (
-                            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                                <h3 className="text-lg font-semibold mb-4">{skillGroup.name}</h3>
+                            <div key={index} className="bg-dark-800 p-6 rounded-xl shadow-sm border border-dark-700">
+                                <h3 className="text-lg font-semibold mb-4 text-white">{skillGroup.name}</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {skillGroup.items.map((skill, i) => (
-                                        <span key={i} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                                        <span key={i} className="bg-emerald-900/30 text-emerald-400 text-xs px-2 py-1 rounded">
                                             {skill}
                                         </span>
                                     ))}
@@ -218,37 +319,70 @@ export default function RameshVishwakarmaPage() {
                             </div>
                         ))}
                     </div>
-                </section>
+                </SectionReveal>
 
                 {/* Featured Projects */}
-                <section className="mb-16">
-                    <h2 className="text-2xl font-bold mb-6 border-b pb-2">Featured Projects</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.6}
+                    className="mb-16"
+                >
+                    <h2 className="text-2xl font-bold mb-6 border-b border-dark-700 pb-2 text-white">Featured Projects</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {projects.map((project, index) => (
                             <motion.div
                                 key={index}
-                                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-                                whileHover={{ y: -5 }}
+                                className="bg-dark-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-dark-700"
+                                whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(16, 185, 129, 0.1)" }}
                             >
-                                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                                <p className="text-gray-700 mb-4">{project.description}</p>
+                                <div className="flex justify-between items-start mb-2">
+                                    <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                                    <span className="bg-emerald-900/30 text-emerald-400 text-xs px-2 py-1 rounded">
+                                        {project.value}
+                                    </span>
+                                </div>
+                                <p className="text-gray-300 mb-4">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.technologies.map((tech, i) => (
-                                        <span key={i} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                                        <span key={i} className="bg-emerald-900/30 text-emerald-400 text-xs px-2 py-1 rounded-full">
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
-                                <Link
+                                <a
                                     href={project.link}
-                                    className="inline-flex items-center text-blue-600 hover:text-blue-800"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-emerald-400 hover:text-emerald-300"
                                 >
-                                    View Details <FiArrowLeft className="ml-1 transform rotate-180" />
-                                </Link>
+                                    View Project <FiExternalLink className="ml-1" />
+                                </a>
                             </motion.div>
                         ))}
                     </div>
-                </section>
+                </SectionReveal>
+
+                {/* CTA Section */}
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.7}
+                >
+                    <div className="bg-gradient-to-r from-emerald-900/30 to-teal-900/30 p-8 rounded-xl text-center">
+                        <h2 className="text-2xl font-bold mb-4 text-white">Work with an IIT Patna graduate on your next project</h2>
+                        <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                            Looking for a developer with the technical expertise of an IIT education and practical industry experience?
+                            Contact Ramesh Vishwakarma to discuss how he can help bring your project to life.
+                        </p>
+                        <Link
+                            href="/contact"
+                            className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 inline-flex items-center justify-center font-medium shadow-lg shadow-emerald-900/20"
+                        >
+                            Get in Touch
+                        </Link>
+                    </div>
+                </SectionReveal>
 
                 {/* Additional content for SEO */}
                 <section className="mb-16 prose max-w-none">
@@ -273,7 +407,7 @@ export default function RameshVishwakarmaPage() {
                     <div lang="hi" className="mt-8 pt-8 border-t border-gray-200">
                         <h3 className="text-xl font-bold mb-4">रमेश विश्वकर्मा - आईआईटी पटना से स्नातक (IIT Patna से Graduate)</h3>
                         <p>
-                            रमेश विश्वकर्मा आईआईटी पटना के एक प्रतिष्ठित पूर्व छात्र हैं, जहां उन्होंने कंप्यूटर साइंस में बैचलर ऑफ टेक्नोलॉजी पूरा किया। भारत के प्रमुख तकनीकी संस्थानों में से एक में उनकी शैक्षिक पृष्ठभूमि ने उन्हें कंप्यूटर साइंस के सिद्धांतों, एल्गोरिदम, डेटा स्ट्रक्चर और सिस्टम डिज़ाइन में मजबूत आधार प्रदान किया है।
+                            रमेश विश्वकर्मा आईआईटी पटना के एक प्रतिष्ठित पूर्व छात्र हैं, जहां उन्होंने कंप्यूटर साइंस में बैचलर ऑफ टेक्नॉलॉजी पूरा किया। भारत के प्रमुख तकनीकी संस्थानों में से एक में उनकी शैक्षिक पृष्ठभूमि ने उन्हें कंप्यूटर साइंस के सिद्धांतों, एल्गोरिदम, डेटा स्ट्रक्चर और सिस्टम डिज़ाइन में मजबूत आधार प्रदान किया है।
                         </p>
                         <p>
                             आईआईटी पटना से स्नातक होने के बाद, रमेश ने सॉफ्टवेयर डेवलपमेंट में एक उल्लेखनीय करियर बनाया है, जिसमें वेब और मोबाइल एप्लिकेशन में विशेषज्ञता हासिल की है। उनकी विशेषज्ञता पूरे डेवलपमेंट स्टैक में फैली हुई है, जिसमें React और Vue.js जैसी फ्रंटएंड टेक्नोलॉजीज से लेकर Node.js और Django जैसे बैकएंड फ्रेमवर्क शामिल हैं। वे विशेष रूप से AWS, Firebase और अन्य आधुनिक क्लाउड प्लेटफॉर्म का उपयोग करके क्लाउड-नेटिव एप्लिकेशन बनाने में कुशल हैं।
@@ -327,21 +461,6 @@ export default function RameshVishwakarmaPage() {
                             </div>
                         </div>
                     </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="bg-blue-50 p-8 rounded-xl text-center">
-                    <h2 className="text-2xl font-bold mb-4">Work with an IIT Patna graduate on your next project</h2>
-                    <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-                        Looking for a developer with the technical expertise of an IIT education and practical industry experience?
-                        Contact Ramesh Vishwakarma to discuss how he can help bring your project to life.
-                    </p>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                        Get in Touch
-                    </Link>
                 </section>
 
                 {/* Schema.org Person markup for SEO */}

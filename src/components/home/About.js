@@ -9,23 +9,23 @@ const About = () => {
     const features = [
         {
             icon: <FiCloud className="text-emerald-400 text-2xl" />,
-            title: 'CLOUD BASED APP',
-            description: 'SaaS-based solution hosted on secure cloud, accessible from anywhere anytime. Secured through multiple firewalls from top cloud provider.'
+            title: 'PREMIUM SOLUTIONS',
+            description: 'We deliver high-quality web and mobile applications with cutting-edge technologies including AI integration and cloud infrastructure.'
         },
         {
             icon: <FiClock className="text-emerald-400 text-2xl" />,
-            title: '24X7 AVAILABILITY',
-            description: 'Solution is highly available across the globe over the internet with proven connectivity backbone.'
+            title: 'FLEXIBLE PRICING',
+            description: 'Starting from ₹30,000 for basic projects with custom pricing for advanced solutions. Projects range up to ₹8 Lakh+ for enterprise-grade applications.'
         },
         {
             icon: <FiCheckCircle className="text-emerald-400 text-2xl" />,
-            title: 'INSTANT SETUP',
-            description: 'Start using your LMS Solution in just 3 Hours. Learn app usage in just 1 day and become an expert.'
+            title: 'TECH VERSATILITY',
+            description: 'We work with any technology stack required for your project, from React and Next.js to Flutter, Node.js, and GenAI integrations.'
         },
         {
             icon: <FiHeadphones className="text-emerald-400 text-2xl" />,
-            title: 'TECH SUPPORT',
-            description: 'Full-time tech support available via phone, email, remote access, and video conferencing.'
+            title: 'DEDICATED SUPPORT',
+            description: 'Full-time technical support with maintenance packages to ensure your application runs smoothly after deployment.'
         }
     ];
 
@@ -63,13 +63,13 @@ const About = () => {
                         <div className="relative">
                             <div className="absolute inset-0 bg-emerald-700/20 rounded-lg transform translate-x-3 translate-y-3 -z-10"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                                alt="Ramesh Vishwakarma - Founder"
+                                src="/ufdevsteam.jpeg"
+                                alt="UFDevs Team - Unfiltered Developers"
                                 className="rounded-lg shadow-lg w-full h-auto object-cover"
                             />
                             <div className="absolute -right-4 -bottom-4 bg-dark-800 rounded-lg shadow-lg p-4">
-                                <div className="text-xl font-bold text-emerald-400">5+ Years</div>
-                                <div className="text-gray-300 text-sm">of Experience</div>
+                                <div className="text-xl font-bold text-emerald-400">₹5 Crore</div>
+                                <div className="text-gray-300 text-sm">Market Valuation</div>
                             </div>
                         </div>
                     </SectionReveal>
@@ -81,31 +81,31 @@ const About = () => {
                         duration={0.7}
                         delay={0.1}
                     >
-                        <div className="mb-3 text-sm font-semibold text-emerald-400 uppercase tracking-wider">About UFDev.LLC</div>
-                        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Driven by Innovation, Built by Experts</h2>
+                        <div className="mb-3 text-sm font-semibold text-emerald-400 uppercase tracking-wider">About UFDevs</div>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">Unfiltered Developers: Premium Solutions Without Limits</h2>
                         <p className="text-gray-300 mb-4 text-base">
-                            Founded by Mumbai-based, Unfiltered 😏 Developers (UFDev.LLC) brings cutting-edge digital solutions to your doorstep. I am <Link href="/about/ramesh-vishwakarma-iit-patna" className="text-emerald-400 hover:underline">Ramesh Vishwakarma</Link>, a passionate full-stack app developer, and we are here to help transform your offline business into an online powerhouse.
+                            UFDevs (Unfiltered Developers) delivers premium web and mobile development services with a focus on innovation and cutting-edge technology. Our projects start at ₹30,000 with some projects valued at ₹3 Lakh to ₹8 Lakh+, especially those integrating GenAI APIs and advanced features.
                         </p>
                         <p className="text-gray-300 mb-6 text-base">
-                            Our focus is on providing scalable, affordable, and efficient services that cater to your unique needs. From custom apps to backend management, we&apos;re committed to providing the best digital experiences.
+                            Led by <Link href="/about/ramesh-vishwakarma-iit-patna" className="text-emerald-400 hover:underline">Ramesh Vishwakarma</Link>, a core developer and tech head from IIT Patna, we manage all services with uncompromising quality. With a market valuation of ₹5 Crore ($600,000 USD), our team's technical expertise speaks for itself through our portfolio of successful projects.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                             <div className="flex items-center">
                                 <div className="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
-                                <span className="text-gray-300 text-sm">Innovative Solutions</span>
+                                <span className="text-gray-300 text-sm">GenAI Integration</span>
                             </div>
                             <div className="flex items-center">
                                 <div className="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
-                                <span className="text-gray-300 text-sm">Scalable Architecture</span>
+                                <span className="text-gray-300 text-sm">Enterprise Solutions</span>
                             </div>
                             <div className="flex items-center">
                                 <div className="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
-                                <span className="text-gray-300 text-sm">Affordable Pricing</span>
+                                <span className="text-gray-300 text-sm">Custom Development</span>
                             </div>
                             <div className="flex items-center">
                                 <div className="w-3 h-3 bg-emerald-500 rounded-full mr-2"></div>
-                                <span className="text-gray-300 text-sm">Timely Delivery</span>
+                                <span className="text-gray-300 text-sm">Technical Excellence</span>
                             </div>
                         </div>
 
@@ -152,6 +152,42 @@ const About = () => {
                                 <p className="text-gray-400 text-sm">{feature.description}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </SectionReveal>
+
+                {/* Company Metrics */}
+                <SectionReveal
+                    className="mt-16"
+                    direction="up"
+                    duration={0.7}
+                    delay={0.4}
+                    threshold={0.1}
+                >
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <motion.div
+                            className="bg-dark-800 p-6 rounded-xl shadow-md text-center"
+                            whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(16, 185, 129, 0.1)" }}
+                        >
+                            <h3 className="text-base font-semibold mb-2 text-white">Valuation</h3>
+                            <p className="text-2xl font-bold text-emerald-400">₹5 Crore</p>
+                            <p className="text-gray-400 text-sm mt-2">($600,000 USD)</p>
+                        </motion.div>
+                        <motion.div
+                            className="bg-dark-800 p-6 rounded-xl shadow-md text-center"
+                            whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(16, 185, 129, 0.1)" }}
+                        >
+                            <h3 className="text-base font-semibold mb-2 text-white">Projects Completed</h3>
+                            <p className="text-2xl font-bold text-emerald-400">25+</p>
+                            <p className="text-gray-400 text-sm mt-2">Across various industries</p>
+                        </motion.div>
+                        <motion.div
+                            className="bg-dark-800 p-6 rounded-xl shadow-md text-center"
+                            whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(16, 185, 129, 0.1)" }}
+                        >
+                            <h3 className="text-base font-semibold mb-2 text-white">Client Satisfaction</h3>
+                            <p className="text-2xl font-bold text-emerald-400">98%</p>
+                            <p className="text-gray-400 text-sm mt-2">Based on client feedback</p>
+                        </motion.div>
                     </div>
                 </SectionReveal>
             </div>

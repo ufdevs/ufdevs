@@ -17,33 +17,63 @@ const Projects = () => {
             category: "Web Development"
         },
         {
-            title: "E-Commerce Web Application",
-            description: "A full-stack e-commerce platform with responsive design, product catalog, shopping cart, secure payment integration, and admin dashboard. Optimized for performance and SEO.",
-            image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-            tags: ["React.js", "Node.js", "MongoDB", "Stripe API"],
-            demoLink: "#",
+            title: "trishabose.in",
+            description: "Personal portfolio and showcase website with modern design, responsive layout, and optimized performance.",
+            image: "/trishain.png",
+            tags: ["React.js", "Next.js", "Tailwind CSS", "Responsive Design"],
+            demoLink: "https://trishabose.in",
             repoLink: "#",
             category: "Web Development"
         },
         {
-            title: "Food Delivery Mobile App",
-            description: "Cross-platform mobile application for food ordering and delivery with real-time tracking, payment processing, and push notifications. Available on Android, iOS, and Web.",
-            image: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1022&q=80",
-            tags: ["Flutter", "Firebase", "Google Maps API", "Cross-platform"],
-            demoLink: "#",
+            title: "PeekBI.com",
+            description: "Business intelligence and analytics platform with interactive dashboards and data visualization tools.",
+            image: "/peekbicom.png",
+            tags: ["React.js", "D3.js", "Node.js", "Data Visualization"],
+            demoLink: "https://peekbi.com",
             repoLink: "#",
-            category: "App Development"
+            category: "Web Application"
         },
         {
-            title: "Healthcare Management System",
-            description: "Comprehensive web and mobile platform for healthcare providers to manage patient records, appointments, and billing. Features HIPAA-compliant data security and integration with medical devices.",
-            image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-            tags: ["Angular", "Express.js", "PostgreSQL", "AWS"],
-            demoLink: "#",
+            title: "BharatITS.com",
+            description: "IT services and solutions provider website showcasing enterprise technology services and digital transformation expertise.",
+            image: "/bitsin.png",
+            tags: ["React.js", "Node.js", "Bootstrap", "Responsive Design"],
+            demoLink: "https://bharatits.com",
             repoLink: "#",
-            category: "Web & App Development"
+            category: "Web Development"
+        },
+        {
+            title: "School Management System",
+            description: "Comprehensive school management platform for administrative tasks, student records, and academic performance tracking.",
+            image: "/school.png",
+            tags: ["React.js", "MongoDB", "Express", "Node.js"],
+            demoLink: "https://school-management-weld-zeta.vercel.app/",
+            repoLink: "#",
+            category: "Web Application"
+        },
+        {
+            title: "Sofico Financial Services",
+            description: "Financial services platform with account management, transaction tracking, and financial reporting tools.",
+            image: "/sofico.png",
+            tags: ["Next.js", "Tailwind CSS", "API Integration", "Responsive Design"],
+            demoLink: "https://sofico.ufdevs.me",
+            repoLink: "#",
+            category: "Web Development"
+        },
+        {
+            title: "EmpowerHR Services",
+            description: "HR management platform with employee records, performance tracking, and recruitment workflow automation.",
+            image: "/empowerhr.png",
+            tags: ["React.js", "Node.js", "MongoDB", "Dashboard"],
+            demoLink: "https://servs.ufdevs.me",
+            repoLink: "#",
+            category: "Web Application"
         }
     ];
+
+    // Only display the first 4 projects on the home page
+    const displayedProjects = projects.slice(0, 4);
 
     return (
         <section className="py-16 bg-dark-800" id="portfolio">
@@ -61,7 +91,7 @@ const Projects = () => {
                 </SectionReveal>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    {projects.map((project, index) => (
+                    {displayedProjects.map((project, index) => (
                         <SectionReveal
                             key={index}
                             direction="up"
