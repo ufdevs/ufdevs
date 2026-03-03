@@ -132,7 +132,7 @@ export default function RameshVishwakarmaPage() {
                                 <div className="relative h-96 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-lg overflow-hidden">
                                     <img 
                                         src="/rameshvishwakarma.jpeg" 
-                                        alt="Ramesh Vishwakarma - IIT Patna" 
+                                        alt="Portrait of Ramesh Vishwakarma, IIT Patna student and UFDev founder in Mumbai" 
                                         className="w-full h-full object-cover object-center"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-40"></div>
@@ -222,7 +222,7 @@ export default function RameshVishwakarmaPage() {
                         <div className="h-96 overflow-hidden rounded-lg relative">
                             <img 
                                 src="/ramesh2.jpeg" 
-                                alt="Ramesh Vishwakarma - Working" 
+                                alt="Ramesh Vishwakarma working on a high-value web and app development project at UFDev in Mumbai" 
                                 className="w-full h-full object-cover object-center"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-30"></div>
@@ -592,7 +592,23 @@ export default function RameshVishwakarmaPage() {
                             "mainEntityOfPage": {
                                 "@type": "WebPage",
                                 "@id": `${baseUrl}/about/ramesh-vishwakarma-iit-patna`
-                            }
+                            },
+                            "associatedMedia": [
+                                {
+                                    "@type": "ImageObject",
+                                    "url": `${baseUrl}/rameshvishwakarma.jpeg`,
+                                    "name": "Portrait of Ramesh Vishwakarma IIT Patna UFDev founder",
+                                    "caption": "Ramesh Vishwakarma, IIT Patna student and UFDev founder in Mumbai",
+                                    "representativeOfPage": true
+                                },
+                                {
+                                    "@type": "ImageObject",
+                                    "url": `${baseUrl}/ramesh2.jpeg`,
+                                    "name": "Ramesh Vishwakarma working on a web and app development project at UFDev",
+                                    "caption": "Ramesh Vishwakarma working on a high-value enterprise project at UFDev in Mumbai",
+                                    "representativeOfPage": false
+                                }
+                            ]
                         })
                     }}
                 />
