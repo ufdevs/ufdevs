@@ -16,8 +16,7 @@
 /out/
 
 # Local test / playground projects (not part of main app)
-test-ppc/
-ufdevs-ppc/
+
 
 # production
 /build

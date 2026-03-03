@@ -1,0 +1,63 @@
+{
+    "name": "ufdevs-ppc",
+    "version": "1.0.0",
+    "description": "Project Price Calculator component for React applications",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "test": "jest --config jest.config.cjs",
+        "prepare": "npm run build"
+    },
+    "keywords": [
+        "react",
+        "price-calculator",
+        "project-cost",
+        "app-development",
+        "cost-estimator"
+    ],
+    "author": "Ramesh Vishwakarma",
+    "license": "SEE LICENSE IN LICENSE",
+    "peerDependencies": {
+        "react": "^17.0.0 || ^18.0.0",
+        "react-dom": "^17.0.0 || ^18.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.23.7",
+        "@babel/preset-env": "^7.23.7",
+        "@babel/preset-react": "^7.23.7",
+        "@babel/preset-typescript": "^7.23.7",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^25.0.7",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-typescript": "^11.1.5",
+        "@types/react": "^18.2.46",
+        "autoprefixer": "^10.4.16",
+        "babel-jest": "^29.7.0",
+        "jest": "^29.7.0",
+        "postcss": "^8.4.32",
+        "rollup": "^4.9.2",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
+        "tailwindcss": "^3.4.0",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "framer-motion": "^10.16.16",
+        "react-icons": "^4.12.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ufdevs/ufdevs-ppc.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ufdevs/ufdevs-ppc/issues"
+    },
+    "homepage": "https://github.com/ufdevs/ufdevs-ppc#readme"
+}
