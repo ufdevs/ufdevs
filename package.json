@@ -39,7 +39,8 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "ufdevs-ppc": "file:./ufdevs-ppc"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
