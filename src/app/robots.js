@@ -20,6 +20,6 @@ export default function robots() {
                 disallow: ['/api/', '/private/'],
             },
         ],
-        sitemap: 'https://ufdevs.com/sitemap.xml',
+        sitemap: `${process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://example.com'}/sitemap.xml`,
     };
-} 
+}

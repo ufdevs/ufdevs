@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://ufdevs.com';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://example.com';
     const currentDate = new Date().toISOString();
 
     // Main pages with improved priorities

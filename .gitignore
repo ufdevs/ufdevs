@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+**/node_modules/
 /.pnp
 .pnp.js
 .yarn/install-state.gz
@@ -11,7 +12,12 @@
 
 # next.js
 /.next/
+**/.next/
 /out/
+
+# Local test / playground projects (not part of main app)
+test-ppc/
+ufdevs-ppc/
 
 # production
 /build

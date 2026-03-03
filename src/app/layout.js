@@ -5,18 +5,43 @@ import { generateJsonLd } from './jsonld';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
+// Use environment-based base URL so we don't hard-code a domain.
+// Set NEXT_PUBLIC_SITE_URL in your env (e.g. https://yourdomain.com) before deploying.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://example.com';
+
 export const metadata = {
-  title: 'Full-Stack Web & App Development Agency | UFDev',
-  description: 'Custom web, mobile & OTT platform development by UFDev, founded by IIT Patna alumnus. React, React Native & Node.js expertise for startups & enterprises.',
-  keywords: ['web development', 'app development', 'react', 'react native', 'node.js', 'ott platform', 'full stack', 'software development', 'agency', 'iit patna'],
+  metadataBase: new URL(siteUrl),
+  title:
+    'UFDev | Web & App Development Agency in Mumbai by IIT Patna Alumnus Ramesh Vishwakarma',
+  description:
+    'UFDev is a Mumbai-based web, mobile & OTT platform development agency founded by IIT Patna alumnus Ramesh Vishwakarma. We build high-performance React, React Native & Node.js solutions for startups & enterprises.',
+  keywords: [
+    'web development',
+    'app development',
+    'react',
+    'react native',
+    'node.js',
+    'ott platform',
+    'full stack',
+    'software development',
+    'agency',
+    'iit patna',
+    'mumbai app development',
+    'mumbai web development',
+    'ramesh vishwakarma',
+    'ramesh vishwakarma mumbai',
+  ],
   openGraph: {
-    title: 'UFDev - Web & App Development Agency',
-    description: 'Custom software solutions by UFDev. Web apps, mobile apps & OTT platforms.',
-    url: 'https://ufdevs.com',
+    title:
+      'UFDev - Web & App Development Agency in Mumbai by Ramesh Vishwakarma (IIT Patna)',
+    description:
+      'Custom software solutions by UFDev in Mumbai. Web apps, mobile apps & OTT platforms built by IIT Patna alumnus Ramesh Vishwakarma.',
+    url: '/',
     siteName: 'UFDev',
     images: [
       {
-        url: 'https://ufdevs.com/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
       },
@@ -41,10 +66,10 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://ufdevs.com',
+    canonical: '/',
     languages: {
-      'en-US': 'https://ufdevs.com',
-      'hi-IN': 'https://ufdevs.com/about/ramesh-vishwakarma-iit-patna/hinglish',
+      'en-US': '/',
+      'hi-IN': '/about/ramesh-vishwakarma-iit-patna/hinglish',
     },
   },
   verification: {
@@ -92,7 +117,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, params }) {
-  const jsonLd = generateJsonLd('https://ufdevs.com', '/', metadata.title, metadata.description);
+  const jsonLd = generateJsonLd(
+    siteUrl,
+    '/',
+    metadata.title,
+    metadata.description
+  );
 
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>

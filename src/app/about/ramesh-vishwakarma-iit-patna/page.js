@@ -8,6 +8,10 @@ import { motion } from 'framer-motion';
 import SectionReveal from '../../../components/common/SectionReveal';
 
 export default function RameshVishwakarmaPage() {
+    const baseUrl =
+        typeof window !== 'undefined'
+            ? window.location.origin
+            : process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://example.com';
     useEffect(() => {
         // Scroll to top on page load
         window.scrollTo(0, 0);
@@ -483,6 +487,10 @@ export default function RameshVishwakarmaPage() {
                             },
                             "description": "IIT Patna alumnus, full stack developer specializing in OTT platforms, web and mobile applications.",
                             "knowsAbout": ["Web Development", "Mobile App Development", "OTT Platforms", "React", "Node.js", "Firebase", "AWS"],
+                            "image": [
+                                `${baseUrl}/rameshvishwakarma.jpeg`,
+                                `${baseUrl}/ramesh2.jpeg`
+                            ],
                             "address": {
                                 "@type": "PostalAddress",
                                 "addressLocality": "Mumbai",
@@ -492,7 +500,7 @@ export default function RameshVishwakarmaPage() {
                             },
                             "email": "info@ufdev.com",
                             "telephone": "+917510060787",
-                            "url": "https://serv.ufdevs.me/about/ramesh-vishwakarma-iit-patna",
+                            "url": `${baseUrl}/about/ramesh-vishwakarma-iit-patna`,
                             "sameAs": [
                                 "https://linkedin.com/in/ramesh-vishwakarma-iitp",
                                 "https://github.com/ufdevs"
@@ -515,7 +523,7 @@ export default function RameshVishwakarmaPage() {
                                 "alumniOf": "Indian Institute of Technology Patna"
                             },
                             "description": "Premium web and mobile app development agency founded by IIT Patna alumnus Ramesh Vishwakarma. We specialize in OTT platforms, custom web applications, and mobile app development.",
-                            "url": "https://serv.ufdevs.me",
+                            "url": baseUrl,
                             "telephone": "+917510060787",
                             "email": "info@ufdev.com",
                             "address": {
@@ -565,6 +573,10 @@ export default function RameshVishwakarmaPage() {
                             "wordCount": "1200",
                             "datePublished": "2024-04-01",
                             "dateModified": new Date().toISOString().split('T')[0],
+                            "image": [
+                                `${baseUrl}/rameshvishwakarma.jpeg`,
+                                `${baseUrl}/ramesh2.jpeg`
+                            ],
                             "author": {
                                 "@type": "Person",
                                 "name": "Ramesh Vishwakarma"
@@ -574,12 +586,12 @@ export default function RameshVishwakarmaPage() {
                                 "name": "UFDev Agency",
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "url": "https://serv.ufdevs.me/ufdev.llc.png"
+                                    "url": `${baseUrl}/ufdev.llc.png`
                                 }
                             },
                             "mainEntityOfPage": {
                                 "@type": "WebPage",
-                                "@id": "https://serv.ufdevs.me/about/ramesh-vishwakarma-iit-patna"
+                                "@id": `${baseUrl}/about/ramesh-vishwakarma-iit-patna`
                             }
                         })
                     }}
