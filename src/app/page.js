@@ -7,14 +7,49 @@ import PriceCalculator from '../components/pricing/PriceCalculator';
 import ContactForm from '../components/contact/ContactForm';
 
 export const metadata = {
-  title: 'Best Web & App Development Services in Mumbai | Custom Websites & Mobile Apps',
-  description: 'Professional web development and mobile app development services in Mumbai by UFDev, led by IIT Patna alumnus Ramesh Vishwakarma. Custom websites, e-commerce solutions, Android/iOS apps & cross-platform applications.',
-  keywords: 'web development, website design, mobile app development, iOS app development, Android app development, custom website, ecommerce website, React developers, Flutter app development, web application, responsive design, app developers Mumbai, website development company, hire web developers, app development services, ramesh vishwakarma, ramesh vishwakarma mumbai'
+  title: 'Top Software Development Company in Mumbai | US & India Tech Partner',
+  description: 'UFDevs is a leading software development company in Mumbai, providing custom software solutions, mobile apps, and OTT platforms for US and India startups. Led by Ramesh Vishwakarma, IIT Patna alumnus.',
+  keywords: 'software development company, software development Mumbai, custom software development, hire software developers, software solutions India, web development, app development, Ramesh Vishwakarma UFDevs, US startup tech partner, software engineering agency'
 };
 
 export default function Home() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What software development services does UFDevs provide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "UFDevs provides comprehensive software development services including custom web applications, mobile apps (Android/iOS), OTT platforms, and AI-driven software solutions for startups in the US and India."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why choose Ramesh Vishwakarma and UFDevs for your project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Led by Ramesh Vishwakarma, an IIT Patna alumnus, UFDevs combines technical excellence with affordable pricing, delivering premium software solutions that scale globally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide software development for US startups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, UFDevs is a trusted tech partner for US-based startups, offering specialized services like Bamon's Kitchen and Second Innings App development."
+        }
+      }
+    ]
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero />
       <Services />
       <About />

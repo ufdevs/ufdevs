@@ -24,6 +24,7 @@ export default function sitemap() {
         { route: '/services/backend', priority: 0.92, changeFrequency: 'weekly' },
         { route: '/services/cloud', priority: 0.88, changeFrequency: 'weekly' },
         { route: '/services/devops', priority: 0.88, changeFrequency: 'weekly' },
+        { route: '/services/custom-software-development', priority: 1.0, changeFrequency: 'daily' },
 
         // Featured project page
         { route: '/portfolio/imaxx-tv-ott', priority: 0.93, changeFrequency: 'monthly' },

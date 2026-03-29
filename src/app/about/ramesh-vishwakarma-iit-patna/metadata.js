@@ -23,6 +23,12 @@ export const metadata = {
                 height: 800,
                 alt: 'Ramesh Vishwakarma working on web and app development projects in Mumbai',
             },
+            {
+                url: '/ufdevsteam.jpeg',
+                width: 1280,
+                height: 720,
+                alt: 'Ramesh Vishwakarma and the UFDevs Team at IIT Patna - Expert Web & App Developers',
+            },
         ],
     },
     twitter: {

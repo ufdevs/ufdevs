@@ -28,32 +28,32 @@ export default function RameshVishwakarmaPage() {
 
     const projects = [
         {
+            title: "Bamon's Kitchen (US Startup)",
+            description: "High-end Indian tiffin and catering platform for the US market. Implemented advanced SEO and ordering systems.",
+            link: "https://www.bamonskitchen.com/",
+            technologies: ["Next.js", "Tailwind", "SEO"],
+            value: "₹3.5 Lakh+"
+        },
+        {
             title: "iMaxx TV OTT Platform",
-            description: "Developed IMAXX TV OTT info site, implemented AWS MediaConvert for video transcoding, managed admin panel, collaborated on bug fixes, and deployed app to Google Play and Apple App Store.",
-            link: "/portfolio/imaxx-tv-ott",
-            technologies: ["React", "Node.js", "Firebase", "AWS"],
+            description: "Global OTT platform development with AWS media pipeline and multi-platform deployment (Play Store/App Store).",
+            link: "https://www.imaxxtvdigital.com/",
+            technologies: ["React", "Node.js", "AWS", "Firebase"],
             value: "₹8 Lakh+"
         },
         {
-            title: "Employee Management Service",
-            description: "Developed EmpowerHR backend using Node.js, Express, and MongoDB. Implemented RBA, JWT, secure login with device lock, and integrated geolocation, photo verification, and Stripe payments.",
-            link: "https://servs.ufdevs.me",
-            technologies: ["Node.js", "React.js", "MongoDB", "Express"],
-            value: "₹3 Lakh+"
+            title: "Mingle Entertainment (India Startup)",
+            description: "Social entertainment app with 1L+ downloads. Enhanced real-time features and backend scalability as lead developer.",
+            link: "https://play.google.com/store/apps/details?id=com.mingleentertainment.mingle.v2",
+            technologies: ["React Native", "Node.js", "MongoDB"],
+            value: "₹12 Lakh+"
         },
         {
-            title: "Video Processing Pipeline (SaaS)",
-            description: "Developed a video transcoding app with RESTful API integration and dynamic configuration for AWS, Docker, Ffmpeg.",
-            link: "https://drive.google.com/file/d/1-CRCZvmJ-kW_NVJbj0zx6-0aGC24Up0r/view",
-            technologies: ["Node.js", "Next.js", "AWS", "Docker"],
-            value: "₹2.5 Lakh+"
-        },
-        {
-            title: "Employee Management System",
-            description: "Built an employee management system with dynamic routing and responsive UI. Focused on maintainability with clean code and refactoring, MVVM Architecture.",
-            link: "https://drive.google.com/file/d/1-AuxAmq4-4ZOim1BvaTdmL-2OmNDc6Nh/view",
+            title: "Second Innings (US App)",
+            description: "Mobile application for US-based startups focusing on social elder care and community integration.",
+            link: "https://play.google.com/store/apps/details?id=com.second.innings",
             technologies: ["Flutter", "Firebase"],
-            value: "₹1.5 Lakh+"
+            value: "₹5 Lakh+"
         }
     ];
 
@@ -62,7 +62,7 @@ export default function RameshVishwakarmaPage() {
             position: "Core Developer & Tech Head",
             company: "UFDevs (Unfiltered Developers)",
             period: "2022 - Present",
-            description: "Leading all technical aspects of development at UFDevs, managing services and overseeing project implementation. Specializing in premium web and mobile applications with GenAI integration and advanced features."
+            description: "Leading all technical aspects of development for US and India based startups. Specializing in premium web and mobile applications with GenAI integration. Expert in Ramesh Vishwakarma UFDev platform architecture and global delivery."
         },
         {
             position: "Training Sub Coordinator Web Dev",
@@ -108,9 +108,11 @@ export default function RameshVishwakarmaPage() {
     const achievements = [
         "2nd Place in Web Development Competition at IIT Patna, Mar 2025 - Certificate: <a href='https://drive.google.com/file/d/1-EuIRlb_dzSNFMGtFYjjfMG6-lwblqb9/view' target='_blank' rel='noopener noreferrer' class='text-emerald-600 hover:underline'>View Certificate</a>",
         "2nd Place in Full Stack Web Dev Competition at IIT Patna, May 2025 - Certificate: <a href='https://drive.google.com/file/d/1zGZx9w3B-H29oKb3MigIy1qKinDH4lw0/view' target='_blank' rel='noopener noreferrer' class='text-emerald-600 hover:underline'>View Certificate</a>",
-        "2nd Place in Hack4बिहार Hackathon - Recognized for 'functionality so smooth, it's like poetry in code'",
-        "Featured in Technology Club IIT Patna's showcase of top developers",
-        "Developed multiple high-profile projects with valuations exceeding industry standards"
+        "Winner of 2nd Place in Hack4बिहार Hackathon - Recognized for 'functionality so smooth, it's like poetry in code'",
+        "Core Tech Partner for 'Second Innings' (US Startup) and 'Bamon's Kitchen' (US Business)",
+        "Lead Developer for 'Mingle Entertainment' (India Startup) with 1,00,000+ Active Users",
+        "Expert in US & India Startup scaling and digital transformation",
+        "Ranked as a top developer for Ramesh Vishwakarma UFDevs search intent"
     ];
 
     return (
@@ -151,10 +153,18 @@ export default function RameshVishwakarmaPage() {
                                     <a
                                         href="https://www.linkedin.com/in/ramesh-vishwakarma-957355234/"
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                        rel="noopener noreferrer me"
                                         className="bg-dark-800 hover:bg-dark-700 text-emerald-400 p-2 rounded-full transition"
                                     >
                                         <FiLinkedin size={20} />
+                                    </a>
+                                    <a
+                                        href="https://github.com/ufdevs"
+                                        target="_blank"
+                                        rel="noopener noreferrer me"
+                                        className="bg-dark-800 hover:bg-dark-700 text-emerald-400 p-2 rounded-full transition"
+                                    >
+                                        <FiGithub size={20} />
                                     </a>
                                     <a
                                         href="https://ufdevs.me"
@@ -229,6 +239,28 @@ export default function RameshVishwakarmaPage() {
                         </div>
                         <div className="text-center mt-3 text-gray-300 text-sm">
                             Ramesh Vishwakarma working on a high-value enterprise project at UFDevs
+                        </div>
+                    </div>
+                </SectionReveal>
+
+                {/* Team & Collaboration Image */}
+                <SectionReveal
+                    direction="up"
+                    duration={0.7}
+                    delay={0.15}
+                    className="mb-16"
+                >
+                    <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 p-3 rounded-xl shadow-lg">
+                        <div className="h-96 overflow-hidden rounded-lg relative">
+                            <img 
+                                src="/ufdevsteam.jpeg" 
+                                alt="Ramesh Vishwakarma and the UFDevs Team at IIT Patna - Collaborating on Premium Web and App Projects" 
+                                className="w-full h-full object-cover object-center"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-30"></div>
+                        </div>
+                        <div className="text-center mt-3 text-gray-300 text-sm">
+                            Ramesh Vishwakarma (Center) with the UFDevs Team at IIT Patna, collaborating on technical projects
                         </div>
                     </div>
                 </SectionReveal>
@@ -489,7 +521,8 @@ export default function RameshVishwakarmaPage() {
                             "knowsAbout": ["Web Development", "Mobile App Development", "OTT Platforms", "React", "Node.js", "Firebase", "AWS"],
                             "image": [
                                 `${baseUrl}/rameshvishwakarma.jpeg`,
-                                `${baseUrl}/ramesh2.jpeg`
+                                `${baseUrl}/ramesh2.jpeg`,
+                                `${baseUrl}/ufdevsteam.jpeg`
                             ],
                             "address": {
                                 "@type": "PostalAddress",
@@ -575,7 +608,8 @@ export default function RameshVishwakarmaPage() {
                             "dateModified": new Date().toISOString().split('T')[0],
                             "image": [
                                 `${baseUrl}/rameshvishwakarma.jpeg`,
-                                `${baseUrl}/ramesh2.jpeg`
+                                `${baseUrl}/ramesh2.jpeg`,
+                                `${baseUrl}/ufdevsteam.jpeg`
                             ],
                             "author": {
                                 "@type": "Person",
@@ -586,7 +620,7 @@ export default function RameshVishwakarmaPage() {
                                 "name": "UFDev Agency",
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "url": `${baseUrl}/ufdev.llc.png`
+                                    "url": `${baseUrl}/ufdev-favicon.svg`
                                 }
                             },
                             "mainEntityOfPage": {
@@ -606,6 +640,13 @@ export default function RameshVishwakarmaPage() {
                                     "url": `${baseUrl}/ramesh2.jpeg`,
                                     "name": "Ramesh Vishwakarma working on a web and app development project at UFDev",
                                     "caption": "Ramesh Vishwakarma working on a high-value enterprise project at UFDev in Mumbai",
+                                    "representativeOfPage": false
+                                },
+                                {
+                                    "@type": "ImageObject",
+                                    "url": `${baseUrl}/ufdevsteam.jpeg`,
+                                    "name": "Ramesh Vishwakarma and UFDevs Team at IIT Patna",
+                                    "caption": "Ramesh Vishwakarma with the UFDevs Team at IIT Patna collaborating on web and mobile development projects",
                                     "representativeOfPage": false
                                 }
                             ]

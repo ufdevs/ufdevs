@@ -9,9 +9,9 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
             {
                 '@type': 'Organization',
                 '@id': `${baseUrl}/#organization`,
-                name: 'UFDev Agency',
-                alternateName: 'UFDev India',
-                description: 'Premier app development company in Mumbai, India. Full-stack development agency specializing in affordable web applications, mobile apps, and OTT platforms. Founded by Ramesh Vishwakarma, IIT Patna alumni.',
+                name: 'UFDevs Agency',
+                alternateName: ['UFDev', 'UFDev India', 'UFDevs Global', 'ufdevs.live'],
+                description: 'Top-tier tech partner for US and India startups. Founded by Ramesh Vishwakarma (IIT Patna), UFDevs specializes in high-end Web, Mobile (Flutter) & OTT platforms. Known for Ramesh Vishwakarma UFDev precision and global delivery.',
                 url: baseUrl,
                 logo: {
                     '@type': 'ImageObject',
@@ -29,7 +29,9 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                     },
                     sameAs: [
                         'https://github.com/ufdevs',
-                        'https://www.linkedin.com/in/ramesh-vishwakarma-iitp/'
+                        'https://www.linkedin.com/in/ramesh-vishwakarma-957355234/',
+                        'https://www.instagram.com/p/DV3vcKgjPbY/',
+                        'https://ufdevs.live'
                     ]
                 },
                 foundingDate: '2022-01-01',
@@ -79,7 +81,11 @@ export const generateJsonLd = (baseUrl, path, title, description, ogImage, addit
                     'Node.js',
                     'Flutter App Development',
                     'OTT Platform Development',
-                    'Full Stack Development Mumbai'
+                    'Full Stack Development Mumbai',
+                    'US Startup Development Partner',
+                    'India Startup Technology Partner',
+                    'Ramesh Vishwakarma UFDev',
+                    'Ramesh Vishwakarma UFDevs'
                 ],
                 makesOffer: [
                     {

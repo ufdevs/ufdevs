@@ -61,9 +61,9 @@ export default function ServicesPage() {
         },
         {
             icon: <FiCode className="text-emerald-400 text-3xl mb-4" />,
-            title: 'Custom Software',
-            description: 'Tailored software solutions designed to address your unique business challenges.',
-            link: '/services/custom-software',
+            title: 'Custom Software Development',
+            description: 'Tailored software solutions designed for US and Indian startups to solve unique business challenges.',
+            link: '/services/custom-software-development',
         },
         {
             icon: <FiSettings className="text-emerald-400 text-3xl mb-4" />,

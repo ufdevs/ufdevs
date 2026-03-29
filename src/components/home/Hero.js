@@ -148,7 +148,7 @@ const Hero = () => {
                                 Your Partner in
                             </div>
                             <div className="block mt-2 text-white">
-                                <span className="text-emerald-400">Scalable</span> App Development
+                                <span className="text-emerald-400">Scalable</span> Software & App Dev
                             </div>
                         </h1>
                         <p className="text-lg text-gray-300 mb-8 max-w-xl">

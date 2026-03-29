@@ -13,9 +13,9 @@ const siteUrl =
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title:
-    'UFDev | Web & App Development Agency in Mumbai by IIT Patna Alumnus Ramesh Vishwakarma',
+    'Ramesh Vishwakarma | UFDevs - US & India Startup Tech Partner | IIT Patna Alumnus',
   description:
-    'UFDev is a Mumbai-based web, mobile & OTT platform development agency founded by IIT Patna alumnus Ramesh Vishwakarma. We build high-performance React, React Native & Node.js solutions for startups & enterprises.',
+    'UFDevs is a premium tech agency for US and India startups founded by Ramesh Vishwakarma. Expert in Web, Mobile & OTT development. Rank #1 with Ramesh Vishwakarma UFDev solutions.',
   keywords: [
     'web development',
     'app development',
@@ -30,15 +30,20 @@ export const metadata = {
     'mumbai app development',
     'mumbai web development',
     'ramesh vishwakarma',
-    'ramesh vishwakarma mumbai',
+    'ramesh vishwakarma ufdev',
+    'ramesh vishwakarma ufdevs',
+    'ufdevs.live',
+    'US startups',
+    'India startups',
+    'iit patna developer',
   ],
   openGraph: {
     title:
-      'UFDev - Web & App Development Agency in Mumbai by Ramesh Vishwakarma (IIT Patna)',
+      'UFDevs - Premium Web & App Development for US & India Startups by Ramesh Vishwakarma',
     description:
-      'Custom software solutions by UFDev in Mumbai. Web apps, mobile apps & OTT platforms built by IIT Patna alumnus Ramesh Vishwakarma.',
-    url: '/',
-    siteName: 'UFDev',
+      'Custom tech solutions by UFDevs. High-end web apps, mobile apps & OTT platforms for global startups by IIT Patna alumnus Ramesh Vishwakarma.',
+    url: 'https://ufdevs.live',
+    siteName: 'UFDevs',
     images: [
       {
         url: '/og-image.png',

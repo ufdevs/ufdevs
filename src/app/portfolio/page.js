@@ -14,63 +14,99 @@ export default function PortfolioPage() {
     const projects = [
         {
             title: 'iMaxx TV OTT Platform',
-            category: 'Web & Mobile App Development',
-            description: 'A next-generation Global OTT platform with AVOD, SVOD & TVOD models. Built for content creators and audiences with seamless streaming across all devices. Features include user profiles, parental controls, and offline viewing.',
-            technologies: ['React', 'Node.js', 'Firebase', 'AWS', 'Payment Gateway Integration'],
+            category: 'OTT & Media (Global)',
+            description: 'A global OTT platform featuring AWS MediaConvert video pipeline, SVOD/AVOD models, and multi-platform support (Apple TV, Android TV).',
+            technologies: ['React', 'Node.js', 'AWS', 'Firebase'],
             image: '/imaxxtv.png',
             link: 'https://www.imaxxtvdigital.com/',
             value: '₹8 Lakh+'
         },
         {
-            title: 'trishabose.in',
-            category: 'Web Development',
-            description: 'Personal portfolio and showcase website featuring a modern design, responsive layout, and optimized performance. Created with a focus on user experience and clean aesthetics.',
-            technologies: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
-            image: '/trishain.png',
-            link: 'https://trishabose.in',
-            value: '₹1.5 Lakh+'
+            title: "Bamon's Kitchen",
+            category: 'US Startup - Food & Catering',
+            description: 'Premium Indian Tiffin and Catering service platform for the US/Vancouver market, focusing on wholesome home-style meals.',
+            technologies: ['Next.js', 'Tailwind CSS', 'SEO', 'Online Ordering'],
+            image: '/bamons.png',
+            link: 'https://www.bamonskitchen.com/',
+            value: '₹3.5 Lakh+'
         },
         {
-            title: 'PeekBI.com',
-            category: 'Web Application',
-            description: 'Business intelligence and analytics platform with interactive dashboards and data visualization tools. Enables companies to transform raw data into actionable insights through customizable reports.',
-            technologies: ['React', 'D3.js', 'Node.js', 'MongoDB', 'Data Visualization'],
-            image: '/peekbicom.png',
-            link: 'https://peekbi.com',
+            title: 'Second Innings App',
+            category: 'US Startup - Mobile App',
+            description: 'A revolutionary mobile application for US-based startups focusing on social and service integration.',
+            technologies: ['Flutter', 'Firebase', 'Mobile App'],
+            image: '/secondinnings.png',
+            link: 'https://play.google.com/store/apps/details?id=com.second.innings',
+            value: '₹5 Lakh+'
+        },
+        {
+            title: 'Mingle Entertainment V2',
+            category: 'India Startup - Social App',
+            description: 'A large-scale social entertainment app with 1,00,000+ downloads, featuring real-time interactions and media processing.',
+            technologies: ['React Native', 'Node.js', 'MongoDB'],
+            image: '/mingle.png',
+            link: 'https://play.google.com/store/apps/details?id=com.mingleentertainment.mingle.v2',
+            value: '₹12 Lakh+'
+        },
+        {
+            title: 'Ask Your Doctor',
+            category: 'Healthcare & SaaS',
+            description: 'A comprehensive digital platform for doctors in India to manage their consultations and digital presence.',
+            technologies: ['React', 'Node.js', 'MongoDB', 'Telemedicine'],
+            image: '/askyourdoctor.png',
+            link: 'https://askyourdoctor.in/',
+            value: '₹4 Lakh+'
+        },
+        {
+            title: 'PinkTree Health',
+            category: 'Healthcare Technology',
+            description: 'Advanced lung health management platform focusing on remote monitoring and digital care for respiratory patients.',
+            technologies: ['React', 'Next.js', 'Healthcare API'],
+            image: '/pinktree.png',
+            link: 'https://pinktreehealth.com/',
+            value: '₹6 Lakh+'
+        },
+        {
+            title: 'KolourSync Agency',
+            category: 'Design & Agency Platform',
+            description: 'A premium design and development agency platform showcase featuring high-end brand experiences.',
+            technologies: ['PHP', 'MySQL', 'Brand Design'],
+            image: '/koloursync.png',
+            link: 'https://koloursyncc.com/',
             value: '₹3 Lakh+'
         },
         {
-            title: 'BharatITS.com',
-            category: 'Web Development',
-            description: 'IT services and solutions provider website showcasing enterprise technology services and digital transformation expertise. Features service portfolio, case studies, and client testimonials.',
-            technologies: ['React', 'Node.js', 'Bootstrap', 'Express', 'Responsive Design'],
-            image: '/bitsin.png',
-            link: 'https://bharatits.com',
-            value: '₹2 Lakh+'
+            title: 'INVIP RIDE',
+            category: 'India Startup - EV Transport',
+            description: 'Smart EV ride-sharing and sustainable transportation service platform with zero emission goals.',
+            technologies: ['Flutter', 'Real-time Tracking', 'EV Integration'],
+            image: '/invipride.png',
+            link: 'https://invipride.com/',
+            value: '₹5 Lakh+'
         },
         {
-            title: 'School Management System',
-            category: 'Web Application',
-            description: 'Comprehensive school management platform for administrative tasks, student records, and academic performance tracking. Features include attendance management, grade reporting, and parent communication tools.',
-            technologies: ['React', 'MongoDB', 'Express', 'Node.js', 'JWT Authentication'],
-            image: '/school.png',
-            link: 'https://school-management-weld-zeta.vercel.app/',
-            value: '₹2.5 Lakh+'
+            title: 'DITRP India',
+            category: 'EdTech & Assessment',
+            description: 'Educational excellence and certification platform serving thousands of students across India.',
+            technologies: ['React', 'EdTech', 'Enterprise Application'],
+            image: '/ditrp.png',
+            link: 'https://ditrpindia.org/',
+            value: '₹4.5 Lakh+'
         },
         {
-            title: 'Sofico Financial Services',
-            category: 'Web Development',
-            description: 'Financial services platform with account management, transaction tracking, and financial reporting tools. Provides users with intuitive dashboards for monitoring financial performance and investment opportunities.',
-            technologies: ['Next.js', 'Tailwind CSS', 'API Integration', 'Charts.js', 'Responsive Design'],
-            image: '/sofico.png',
-            link: 'https://sofico.ufdevs.me',
-            value: '₹1.8 Lakh+'
+            title: 'Pitchers AI Platform',
+            category: 'AI & SaaS - Lead Gen',
+            description: 'AI-powered leads provider platform designed to connect business owners with potential high-value clients.',
+            technologies: ['Next.js', 'AI APIs', 'Lead Generation'],
+            image: '/pitchers.png',
+            link: 'https://pitchers-ten.vercel.app/',
+            value: '₹3 Lakh+'
         },
         {
             title: 'EmpowerHR Services',
-            category: 'Web Application',
-            description: 'HR management platform with employee records, performance tracking, and recruitment workflow automation. Streamlines HR processes and provides analytics for workforce management and planning.',
-            technologies: ['React', 'Node.js', 'MongoDB', 'Redux', 'Dashboard'],
+            category: 'HR Tech & SaaS',
+            description: 'Full-stack enterprise HR management system featuring geolocation, device-locked login, and photo verification.',
+            technologies: ['Node.js', 'React', 'MongoDB', 'Enterprise'],
             image: '/empowerhr.png',
             link: 'https://servs.ufdevs.me',
             value: '₹3 Lakh+'
